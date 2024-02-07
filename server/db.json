@@ -1,5 +1,36 @@
 {
     "animals": [
-
+        {
+            "name": "Ballena azul",
+            "scientificName": "Balaenoptera musculus",
+            "image": "https://trello.com/1/cards/65c36b966268d407a415a538/attachments/65c375f5a3da4d8815fb5a2e/previews/65c375f6a3da4d8815fb5b03/download/pexels-elianne-dipp-4666750.jpg",
+            "photographer": "",
+            "sound": "https://trello.com/1/cards/65c36b966268d407a415a538/attachments/65c3730a0815f88a6e478078/download/animals_whale_large.mp3",
+            "description": "El animal más grande que ha existido en la Tierra, con individuos que pueden alcanzar longitudes de hasta 30 metros y pesar hasta 200 toneladas. Esta especie de ballena es conocida por su característico color gris azulado y su enorme tamaño."
+        },
+        {
+            "name": "Buho",
+            "scientificName": "Strigiformes",
+            "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c3801491fc89df02b3b2df/previews/65c3801591fc89df02b3b321/download/Buho.jpg",
+            "photographer": "",
+            "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c38034a18e0965b46d5cd1/download/buho.mp3",
+            "description": "Un búho es un animal que pertenece al clado de los estrígidos. Se trata de un ave de hábitos nocturnos y rapaz, que se caracteriza por contar con plumas que parecen orejas."
+        },
+        {
+            "name": "Águila",
+            "scientificName": "Aquila chrysaetos",
+            "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37db27398c12225616c63/previews/65c37db27398c12225616c84/download/Aguila.jpg",
+            "photographer": "",
+            "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37e0982a3e4df200d4856/download/Aguila.mp3",
+            "description":"El águila real​​ es una especie de ave accipitriforme de la familia Accipitridae.​ Es una de las aves de presa más conocidas y ampliamente distribuidas de la Tierra."
+        },
+        {
+            "name": "Serpiente cascabel",
+            "scientificName": "Crotalus",
+            "image": "https://trello.com/1/cards/65c36bf1bb9647b7f93b5b33/attachments/65c383a0fbad58bb01919503/previews/65c383a1fbad58bb0191953a/download/Serpiente-cascabel.jpg",
+            "photographer": "",
+            "sound": "https://trello.com/1/cards/65c36bf1bb9647b7f93b5b33/attachments/65c383bce00521f8e6435cd3/download/cascabel.mp3",
+            "description":"Las serpientes de cascabel son un género de la subfamilia de las víboras de foseta dentro de la familia de los vipéridos. Son serpientes venenosas y endémicas del continente americano, desde el sureste de Canadá al norte de Argentina."
+        }
     ]
 }
