@@ -13,8 +13,8 @@ const router = createBrowserRouter([
       element: <Contact />,
     },
     {
-      path: "/nav",
-      element: <Nav />,
+      path: "/animal",
+      element: <Animal />,
     },
   ]);
 
