@@ -107,6 +107,71 @@ const NavContainer = styled.nav`
   margin: 6% 10%;
 }
 
+.hamburguer {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background-color: #6496f9;
+  border-radius: 10px;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.hamburguer:before,
+.hamburguer:after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  right: 0;
+  background-color: #6496f9;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.hamburguer:before {
+  top: -10px;
+  width: 20px;
+}
+
+.hamburguer:after {
+  top: 10px;
+  width: 25px;
+}
+
+.toggle-menu {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hamburguer,
+.toggle-menu {
+  display: none;
+}
+
+.navigation input:checked~.hamburguer {
+  background-color: transparent;
+}
+
+.navigation input:checked~.hamburguer:before {
+  top: 0px;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.navigation input:checked~.hamburguer:after {
+  top: 0px;
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+.navigation input:checked~.menu {
+  right: 0;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 1000px){
   .header {
     border-radius: 10px;
@@ -188,6 +253,7 @@ const NavContainer = styled.nav`
     color: black;
     padding: 0;
     background-color: #6496f9;
+}
 }
 `
 
