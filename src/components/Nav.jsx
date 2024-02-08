@@ -1,6 +1,4 @@
-import React from 'react'
 import styled from 'styled-components'
-
 
 const NavContainer = styled.nav`
 .header {
@@ -261,17 +259,17 @@ const Nav = () => {
   return (
     <NavContainer>
       <div id="inicio">
-        <header class="header">
-            <img class="img-nav" src="../img/Logo Empresarial.png"/>
-            <div class="navigation">
-                <input type="checkbox" class="toggle-menu"/>
-                <div class="hamburguer"></div>
-                <ul class="menu">
-                    <li class="list"><a href="#inicio" class="a-list-first">Inicio</a></li>
-                    <li class="list"><a href="#services" class="a-list">Servicios</a></li>
-                    <li class="list"><a href="#profiles" class="a-list-Profile">Equipo</a></li>
-                    <li class="list"><a href="#proyects" class="a-list">Proyectos</a></li>
-                    <li class="list"><a href="#contact" class="a-list-contact">Contacto</a></li>
+        <header className="header">
+            <img className="img-nav" src="../img/Logo Empresarial.png"/>
+            <div className="navigation">
+                <input type="checkbox" className="toggle-menu"/>
+                <div className="hamburguer"></div>
+                <ul className="menu">
+                    <li className="list"><a href="#inicio" className="a-list-first">Inicio</a></li>
+                    <li className="list"><a href="#services" className="a-list">Servicios</a></li>
+                    <li className="list"><a href="#profiles" className="a-list-Profile">Equipo</a></li>
+                    <li className="list"><a href="#proyects" className="a-list">Proyectos</a></li>
+                    <li className="list"><a href="#contact" className="a-list-contact">Contacto</a></li>
                 </ul>
             </div>
         </header>
