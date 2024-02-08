@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import portada from '../assets/cartel animales.png';
+import imgBig from '../assets/Rectangle 11.png';
 
 const BodyHome = styled.div `
 @media only screen and (min-width: 320px) and (max-width: 1000px){
@@ -41,12 +43,12 @@ const Main = () => {
     return (
         <BodyHome>
             <div className='main-home'>
-              <img className='img-main' src="../../public/cartel animales.png" alt="img-main" />
+              <img className='img-main' src={portada} alt="img-main" />
               <p className='paraghrap-one'><strong>REACT THE ANIMALS</strong></p>
               <p className='paraghrap'>Obras maestras del Museo Nacional de Ciencias Naturales</p>
               <p className='paraghrap'><strong>Exposición</strong></p>
               <p className='paraghrap-last'>04.02.2024 - 25.09.2024</p>
-              <img className='img-full' src="../../public/Rectangle 11.png" alt="" />
+              <img className='img-full' src={imgBig} alt="" />
               <h3>¡Bienvenido a React Museum!</h3>
               <p className='paraghrap-text'>
                 Nos complace anunciar nuestra nueva exposición temporal: "React the Animals". En colaboración con el Museo Nacional de Ciencias Naturales, hemos reunido una impresionante colección de fotografías que capturan la esencia y la belleza de una amplia variedad de animales. <br /> <br /> 

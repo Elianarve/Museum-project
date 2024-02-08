@@ -1,18 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import logo from '../assets/LOGO2.png';
 
 const NavContainer = styled.nav`
 .header {
-  background: linear-gradient(90deg, rgba(100, 150, 249, 1) 17%, rgba(230, 230, 230, 1) 100%);
-  height: 80px;
-  opacity: 70%;
   display: flex;
   justify-content: space-between;
-  border-radius: 15px;
-  width: 86vw;
-  position: fixed;
-  margin: 0.5% 0 0 6%;
 }
-
 
 .img-nav {
   width: auto;
@@ -30,58 +23,46 @@ const NavContainer = styled.nav`
 }
 
 .a-list {
-  color: white;
+  color: black;
   text-decoration: none;
-  border-radius: 30px;
   padding: 5px 20px 5px 14px;
-  background-color: #6496f9;
 }
 
 .a-list-first {
-  color: white;
+  color: black;
   text-decoration: none;
-  border-radius: 30px;
   padding: 5px 20px 5px 20px;
-  background-color: #6496f9;
   margin-left: 15px;
 }
 
 .a-list-Profile {
-  color: white;
+  color: black;
   text-decoration: none;
-  border-radius: 30px;
   padding: 5px 20px 5px 20px;
-  background-color: #6496f9;
 }
 
 
 .a-list-contact {
-  color: white;
+  color: black;
   text-decoration: none;
-  border-radius: 30px;
   padding: 5px 20px 5px 15px;
-  background-color: #6496f9;
   margin-left: 10px;
 }
 
 .a-list:hover {
   color: black;
-  background-color: white;
 }
 
 .a-list-first:hover {
   color: black;
-  background-color: white;
 }
 
 .a-list-Profile:hover {
   color: black;
-  background-color: white;
 }
 
 .a-list-contact:hover {
   color: black;
-  background-color: white;
 }
 
 .navigation {
@@ -109,7 +90,7 @@ const NavContainer = styled.nav`
   position: relative;
   width: 30px;
   height: 4px;
-  background-color: #6496f9;
+  background-color: black;
   border-radius: 10px;
   z-index: 2;
   transition: 0.3s;
@@ -121,19 +102,19 @@ const NavContainer = styled.nav`
   position: absolute;
   height: 4px;
   right: 0;
-  background-color: #6496f9;
+  background-color: black;
   border-radius: 10px;
   transition: 0.3s;
 }
 
 .hamburguer:before {
   top: -10px;
-  width: 20px;
+  width: 29px;
 }
 
 .hamburguer:after {
   top: 10px;
-  width: 25px;
+  width: 29px;
 }
 
 .toggle-menu {
@@ -170,15 +151,17 @@ const NavContainer = styled.nav`
   right: 0;
 }
 
+.title{
+  text-align: left;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 1000px){
-  .header {
-    border-radius: 10px;
-    height: 12vw;
+
+.header{
+  padding: 3%;
 }
 
 .img-nav {
-    width: 45%;
-    height: 70%;
     margin-top: 2%;
 }
 
@@ -192,18 +175,14 @@ const NavContainer = styled.nav`
     flex-direction: column;
     align-items: baseline;
     position: fixed;
-    top: 0px;
+    top: -13px;
     right: -300px;
     width: 200px;
     height: auto;
-    margin-top: 100px;
-    margin-right: 36px;
     padding-top: 20px;
-    background-color: #6496f9;
-    border-radius: 30px;
+    background-color: #13281B;
     cursor: pointer;
 }
-
 
 .a-list {
     color: white;
@@ -218,13 +197,11 @@ const NavContainer = styled.nav`
 .a-list-first:hover {
     color: black;
     padding: 0;
-    background-color: #6496f9;
 }
 
 .a-list:hover {
     color: black;
     padding: 0;
-    background-color: #6496f9;
 }
 
 .menu li a {
@@ -239,7 +216,6 @@ const NavContainer = styled.nav`
 .a-list-Profile:hover {
     color: black;
     padding: 0;
-    background-color: #6496f9;
 }
 
 .a-list-contact {
@@ -250,7 +226,20 @@ const NavContainer = styled.nav`
 .a-list-contact:hover {
     color: black;
     padding: 0;
-    background-color: #6496f9;
+}
+
+.logo-title{
+  display: flex;
+  flex-direction: row;
+}
+
+.title{
+  margin: 20% 0 0% 0;
+  padding-left: 5%;
+}
+
+.line{
+  background: black;
 }
 }
 `
@@ -260,19 +249,22 @@ const Nav = () => {
     <NavContainer>
       <div id="inicio">
         <header className="header">
-            <img className="img-nav" src="../img/Logo Empresarial.png"/>
+          <div className='logo-title'>
+            <img className="img-nav" src={logo}/>
+            <p className='title'><strong>REACT MUSEUM</strong></p>
+            </div>
             <div className="navigation">
                 <input type="checkbox" className="toggle-menu"/>
                 <div className="hamburguer"></div>
                 <ul className="menu">
                     <li className="list"><a href="#inicio" className="a-list-first">Inicio</a></li>
-                    <li className="list"><a href="#services" className="a-list">Servicios</a></li>
-                    <li className="list"><a href="#profiles" className="a-list-Profile">Equipo</a></li>
-                    <li className="list"><a href="#proyects" className="a-list">Proyectos</a></li>
+                    <li className="list"><a href="#services" className="a-list">Animales</a></li>
+                    <li className="list"><a href="#profiles" className="a-list-Profile">Museo</a></li>
                     <li className="list"><a href="#contact" className="a-list-contact">Contacto</a></li>
                 </ul>
             </div>
         </header>
+        <hr className='line' />
     </div>
     </NavContainer>
   )
