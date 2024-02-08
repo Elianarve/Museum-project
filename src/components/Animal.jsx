@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const AnimalContainer = styled.section`
-background-color: #000;
 `
 
 const Animal = () => {
