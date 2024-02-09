@@ -52,6 +52,10 @@ const BodyHome = styled.div `
     padding: 0 15%;
 }
 
+.title-h3{
+    margin-top: 5%;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
     .main-home{
@@ -108,7 +112,7 @@ const Main = () => {
               </div>
               </div>
               
-              <h3>¡Bienvenido a React Museum!</h3>
+              <h3 className='title-h3'>¡Bienvenido a React Museum!</h3>
               <p className='paraghrap-text'>
                 Nos complace anunciar nuestra nueva exposición temporal: "React the Animals". En colaboración con el Museo Nacional de Ciencias Naturales, hemos reunido una impresionante colección de fotografías que capturan la esencia y la belleza de una amplia variedad de animales. <br /> <br /> 
                 Desde majestuosas aves hasta cautivadores mamíferos, pasando por fascinantes criaturas acuáticas y misteriosos reptiles, nuestra exposición ofrece una visión única de la diversidad y la maravilla del reino animal. Cada imagen ha sido cuidadosamente seleccionada para revelar detalles sorprendentes y momentos cautivadores de la vida silvestre. <br /> <br /> 
