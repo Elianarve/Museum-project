@@ -257,10 +257,10 @@ const Nav = () => {
                 <input type="checkbox" className="toggle-menu"/>
                 <div className="hamburguer"></div>
                 <ul className="menu">
-                    <li className="list"><a href="#inicio" className="a-list-first">Inicio</a></li>
-                    <li className="list"><a href="#services" className="a-list">Animales</a></li>
-                    <li className="list"><a href="#profiles" className="a-list-Profile">Museo</a></li>
-                    <li className="list"><a href="#contact" className="a-list-contact">Contacto</a></li>
+                    <li className="list"><a href="/" className="a-list-first">Inicio</a></li>
+                    <li className="list"><a href="/gallery" className="a-list">Animales</a></li>
+                    <li className="list"><a href="/museum" className="a-list-Profile">Museo</a></li>
+                    <li className="list"><a href="/contact" className="a-list-contact">Contacto</a></li>
                 </ul>
             </div>
         </header>
