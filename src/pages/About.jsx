@@ -1,13 +1,15 @@
+import React from 'react'
+import BodyAbout from '../components/BodyAbout'
 import Footer from '../components/Footer';
-import Body from '../components/BodyAbout';
 import Nav from '../components/Nav';
+
 
 const About = () => {
   return (
     <>
-        <Nav />
-        <BodyAbout />
-        <Footer />
+    <Nav />
+    <BodyAbout />
+    <Footer />
     </>
   )
 }

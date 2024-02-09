@@ -1,8 +1,57 @@
+import React from 'react'
+import building from '../assets/museo-edificio.jpg'
 import styled from 'styled-components';
-//import portada from '../assets/cartel animales.png';
-//import imgBig from '../assets/Rectangle 11.png';
 
-const BodyAbout = styled.div `
+const BodyAboutStyle = styled.div `
+
+@media only screen and (min-width: 320px) and (max-width: 1000px){
+  
+      .img-cut {
+        width: 100%; /* Ancho de la imagen al 100% del contenedor */
+        height: auto; /* Altura automática para mantener la proporción */
+        object-fit: cover; /* Recortar la imagen para llenar el contenedor */
+        align-items: center;
+        padding-bottom: 5%;
+      }
+      .about-museum {
+        text-align: center;
+      }
+}
+`
+
+
+
+const BodyAbout = () => {
+  return (
+    <BodyAboutStyle>
+        <div className='about-museum'>
+    <img className='img-cut' src={building} alt="" />
+    <strong className='wellcome'>¡Bienvenido a React Museum!</strong>
+    <p>
+    Somos un centro público de cultura y ocio conectado con la ciudad y la vida urbana, ubicado en el emblemático Palacio de Cibeles, antiguo Palacio de Comunicaciones, sede actual del Ayuntamiento de Madrid. 
+    <br />
+    <br />
+    Nuestra propuesta plantea el diálogo entre disciplinas –diseño, ilustración, arte, fotografía, urbanismo, arquitectura, música, literatura, historia– con el objetivo de activar el pensamiento crítico ante los desafíos del presente y del futuro. Buscamos generar nuevos modos de relacionarnos con la cultura, desde la reflexión intelectual y desde la diversión, provocando la curiosidad de un público cada vez más diverso. 
+    <br />
+    <br />
+    Somos un espacio vivo y efervescente. Nos vertebran: la arquitectura y la historia que nos envuelven, la creatividad que llena nuestras salas y las actividades que hacen vibrar el palacio. En React Museum hay exposiciones, conciertos, talleres, visitas guiadas, eventos, el Centro de Interpretación del Paisaje de la Luz, un punto de información turística, tienda, cafetería y restaurante, áreas sociales y un mirador con vistas únicas. Aquí siempre encontrarás un buen plan. 
+    <br />
+    <br />
+    Recat Museum hace de Madrid su foco y materia básica de estudio; tarjeta de presentación de la ciudad, desde el corazón del Paseo del Arte, quiere ser la mejor estación de llegada y de partida para conocer y sentir su pulso cultural.
+    </p>
+    </div>
+    </BodyAboutStyle >
+  )
+}
+
+export default BodyAbout
+
+/*
+import styled from 'styled-components';
+import portada from '../assets/cartel animales.png';
+import imgBig from '../assets/Rectangle 11.png';
+
+const BodyHome = styled.div `
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
     .main-home{
@@ -63,3 +112,5 @@ const Main = () => {
 }
 
 export default Main;
+*/
+
