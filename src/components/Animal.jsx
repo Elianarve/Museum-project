@@ -50,7 +50,8 @@ section{
 }
 `
 
-const Animal = () => {
+const Animal = () => { 
+  
   return (
    <AnimalContainer>
     <section>
