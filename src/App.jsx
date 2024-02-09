@@ -1,14 +1,19 @@
-import React from 'react';
-import Nav from './components/Nav';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ContactForm from './ContactForm';
 
 const App = () => {
-  /*Aqui se puede hacer codigo JS*/
   return (
-    <>
-    <div>App</div>
-    <Nav />
-    </>
-  )
-}
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" component={ContactForm} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
 
-export default App
+export default App;
+
+
+
