@@ -5,7 +5,7 @@ import Gallery from "../pages/Gallery";
 
 const router = createBrowserRouter([
     {
-      path: "/home",
+      path: "/",
       element: <Home />,
     },
     {
