@@ -1,13 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
+const FormContainer = styled.div`
+.formulario {
+  display: flex;
+} 
+
+.inputs {
+  width: 35vw; 
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1000px){
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+}
+
+.contenedor {
+  display: flex;
+}
+
+}
+
+`
+
+
 const Container = styled.div`
-  width: 100%;
+  width: 150%;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: #434D68; 
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -19,7 +44,7 @@ const Heading = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 20px;
   text-align: center;
-  color: #fff;
+  color: #EEF0E5;
 `;
 
 const InputGroup = styled.div`
@@ -27,10 +52,9 @@ const InputGroup = styled.div`
 `;
 
 const Label = styled.label`
-  display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #fff;
+  color: #EEF0E5;
 `;
 
 const Input = styled.input`
@@ -38,12 +62,11 @@ const Input = styled.input`
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
+  background-color: #EEF0E5;
 `;
 
 const CheckboxLabel = styled.label`
-  display: block;
-  color: #fff;
+  color: #EEF0E5;
   margin-bottom: 10px;
 `;
 
@@ -52,19 +75,19 @@ const CheckboxInput = styled.input`
 `;
 
 const Button = styled.button`
-  width: 50%;
-  padding: 8px 16px;
+  width: 130px;
+  padding: 8px 0px;
   background-color: #434D68;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #EEF0E5;
+  border: 3px solid #EEF0E5;
   border-radius: 25px;
   cursor: pointer;
+  
 `;
 
 const MapContainer = styled.div`
-  margin-top: 20px;
-  width: 100%;
-  max-width: 600px;
+  margin-top: 10px;
+  width: 40%;
   display: flex;
   justify-content: center;
 `;
@@ -123,10 +146,12 @@ const ContactForm = () => {
 
   return (
     <>
+    <FormContainer className='contenedor'>
+      <div className='formulario'>
       <Container>
         <Heading>Contactanos</Heading>
         <form onSubmit={handleSubmit}>
-          <InputGroup>
+          <InputGroup className='inputs'>
             <Label htmlFor="name">Nombre:</Label>
             <Input
               type="text"
@@ -137,7 +162,7 @@ const ContactForm = () => {
               required
             />
           </InputGroup>
-          <InputGroup>
+          <InputGroup className='inputs'>
             <Label htmlFor="email">Email:</Label>
             <Input
               type="email"
@@ -148,7 +173,7 @@ const ContactForm = () => {
               required
             />
           </InputGroup>
-          <InputGroup>
+          <InputGroup className='inputs'>
             <Label htmlFor="message">Mensaje:</Label>
             <Input
               as="textarea"
@@ -159,7 +184,7 @@ const ContactForm = () => {
               required
             />
           </InputGroup>
-          <InputGroup>
+          <InputGroup className='inputs'>
             <CheckboxLabel>
               <CheckboxInput
                 type="checkbox"
@@ -177,14 +202,16 @@ const ContactForm = () => {
       <MapContainer>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.27183079143!2d-3.711619825264592!3d40.42497935513926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228648c68edc1%3A0x6ffead3529527c69!2sC.%20de%20Amaniel%2C%202%2C%20Centro%2C%2028015%20Madrid!5e0!3m2!1ses!2ses!4v1707398554055!5m2!1ses!2ses"
-          width="100%"
-          height="300px"
+          width="80%"
+          height="400px"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </MapContainer>
+      </div>
+      </FormContainer>
     </>
   );
 };
