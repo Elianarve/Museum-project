@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 
 const AnimalContainer = styled.section`
 section{
@@ -50,30 +51,55 @@ section{
 }
 `
 
-const Animal = () => { 
-  
-  return (
-   <AnimalContainer>
-    <section>
-      <div className='itemContent'>
-      <h1 className='name'>Ballena Azul</h1>
-      <h3 className='s_name'>Balaenoptera musculus</h3>
-      <p className='author'>Estefania Bartolomé</p>
-      <div className='marco'>
-        <div className='image'>
-        </div>
-      </div>
-      <p className='description'> El animal más grande que ha existido en la Tierra,
-       con individuos que pueden alcanzar longitudes de hasta 30 metros y pesar hasta
-        200 toneladas. Esta especie de ballena es conocida por su característico color
-          colisiones con barcos, la contaminación acústica y la pérdida de hábitat. 
-          Es considerada una especie en peligro de extinción y está protegida por diversas 
-          leyes y regulaciones internacionales.</p>
+const Animal = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-      </div>
-    </section>
-   </AnimalContainer>
-  )
-}
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/animals');
+        console.log(response)
+        if (!response.ok) {
+          throw new Error('Error al obtener los datos');
+        }
+
+        const result = await response.json();
+        console.log(result)
+        setData(result);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+  return (
+    <AnimalContainer>
+       <div>
+      {loading ? (
+        <p>Cargando...</p>
+      ) : (
+        <section className='itemContent'>
+          {data?.map((animal) => 
+          (<article key={animal.id}>
+          <p>{animal.id}</p>
+          <h1 className='name'>{animal.name}</h1>
+          <h3 className='s_name'>{animal.scientificName}</h3>
+          <p className='author'>{animal.photographer}</p>
+          <div className='marco'><img src={animal.image} alt={animal.name} className='image'/></div>
+          <p className='description'>{animal.description}</p>
+          </article> ))}
+        </section>
+      )}
+     </div>  
+   </AnimalContainer>  
+  );
+ };
 
 export default Animal;
+

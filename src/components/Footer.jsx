@@ -3,7 +3,7 @@ import insta from '../assets/instagram.png';
 import fcb from '../assets/facebook.png';
 import twiter from '../assets/twitter.png';
 import youtube from '../assets/youtube.png';
-import lg from '../assets/logo.png';
+import lg from '../assets/logo-claro.png';
 
 
 const FooterContainer = styled.footer `
@@ -12,6 +12,10 @@ const FooterContainer = styled.footer `
     color: white;
     width: 100%;
     }
+
+.logo-m{
+  width: 8%;
+}    
 
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
@@ -30,7 +34,7 @@ const Footer = () => {
   return (
     <FooterContainer>
         <div className='container'>
-         <img src={lg} alt="logo" /> 
+         <img src={lg} alt="logo" className='logo-m' /> 
          <p>Contacto</p>
          <p>676548934 - 904337658</p> 
          <p>contacto@reactmuseum.com</p>   

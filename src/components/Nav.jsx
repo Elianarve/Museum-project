@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../assets/LOGO2.png';
+import logo from '../assets/logo-oscuro.png';
 
 const NavContainer = styled.nav`
 .header {
