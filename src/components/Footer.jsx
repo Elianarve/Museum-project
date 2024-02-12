@@ -28,6 +28,10 @@ text-align: center;
     margin: 10px;
 }
 }
+
+.title{
+  font-size: 12px;
+}
 `;
 
 const Footer = () => {
@@ -35,6 +39,7 @@ const Footer = () => {
     <FooterContainer>
         <div className='container'>
          <img src={lg} alt="logo" className='logo-m' /> 
+         <p className='title'>REACT<br /> MUSEUM</p>
          <p>Contacto</p>
          <p>676548934 - 904337658</p> 
          <p>contacto@reactmuseum.com</p>   
