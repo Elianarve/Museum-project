@@ -51,7 +51,7 @@ text-align: center;
 
 .logo-m{
     margin: 10px;
-    width: 35%;
+    width: 30%;
 }
 
 

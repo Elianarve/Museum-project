@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Gallery from '../pages/Gallery';
-
+import CreatedAnimal from '../pages/CreatedAnimal';
 
 const router = createBrowserRouter([
     {
@@ -11,6 +11,10 @@ const router = createBrowserRouter([
     {
       path: "/gallery",
       element: <Gallery />,
+    },
+    {
+      path: "/created",
+      element: <CreatedAnimal />,
     }
   ]);
 
