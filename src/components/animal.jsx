@@ -1,79 +1,45 @@
-// import React, { useState, useEffect } from 'react';
-// import Data from '../../server/db.json';
+import { useState, useEffect } from 'react';
 
-// // const Animal = () => {
-// //   const [data, setData] = useState(null);
-// //   const [loading, setLoading] = useState(true);
+const Animal = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-// //   useEffect(() => {
-// //     const fetchData = async () => {
-// //       try {
-// //         const response = await fetch(Data);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/animals');
+        console.log(response)
+        if (!response.ok) {
+          throw new Error('Error al obtener los datos');
+        }
 
-// //         if (!response.ok) {
-// //           throw new Error('Error al obtener los datos');
-// //         }
+        const result = await response.json();
+        console.log(result)
+        setData(result);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error:', error);
+        setLoading(false);
+      }
+    };
 
-// //         const result = await response.json();
+    fetchData();
+  }, []);
 
-// //         setData(result);
-// //         setLoading(false);
-// //       } catch (error) {
-// //         console.error('Error:', error);
-// //         setLoading(false);
-// //       }
-// //     };
 
-// //     fetchData();
-// //   }, []); 
+  return (
+    <div>
+      {loading ? (
+        <p>Cargando...</p>
+      ) : (
+        <div>
+          <ul>
+          {data.map((animal) => (<li>{animal.name}</li>))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+ };
 
-// //   return (
-// //     <div>
-// //       {loading ? (
-// //         <p>Cargando...</p>
-// //       ) : (
-// //         <div>
-// //           <p>Datos de la API: {JSON.stringify(data.name)}</p>
-// //         </div>
-// //       )}
-// //     </div>
-// //   );
-// //  };
-
-// // export default Animal;
-
-// const Animal = () => {
-//   const [data, setData] = useState(null);
-//   const [loading, setLoading] = useState(true);
-//   document.getElementById('animal');
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         // Cambiado de fetch(Data) a simplemente referenciar el objeto Data directamente
-//         setData(Data);
-//         setLoading(false);
-//       } catch (error) {
-//         console.error('Error:', error);
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchData();
-//   }, []); 
-
-//   return (
-//     <div>
-//       {loading ? (
-//         <p>Cargando...</p>
-//       ) : (
-//         <div>
-//           {/* Accede directamente a las propiedades del objeto Data */}
-//           <p dangerouslySetInnerHTML={{ __html: `Datos de la API: ${Data.name}` }} />
-//           {/* <p>Datos de la API: {JSON.stringify(Data.name)}</p> */}
-//         </div>
-//       )}
-//     </div>
-//   );
-//  };
-
-// export default Animal;
+export default Animal;
