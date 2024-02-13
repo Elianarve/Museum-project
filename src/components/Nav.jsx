@@ -281,7 +281,7 @@ const Nav = () => {
                 <ul className="menu">
                     <li className="list"><strong><a href="/" className="a-list-first">INICIO</a></strong></li>
                     <li className="list"><strong><a href="/gallery" className="a-list">ANIMALES</a></strong></li>
-                    <li className="list"><strong><a href="/museum" className="a-list-Profile">MUSEO</a></strong></li>
+                    <li className="list"><strong><a href="/about" className="a-list-Profile">MUSEO</a></strong></li>
                     <li className="list"><strong><a href="/contact" className="a-list-contact">CONTACTO</a></strong></li>
                 </ul>
             </div>
