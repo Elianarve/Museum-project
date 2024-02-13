@@ -1,16 +1,28 @@
 import styled from 'styled-components';
-import logo from '../assets/LOGO2.png';
+import logo from '../assets/logo-oscuro.png';
 
 const NavContainer = styled.nav`
 .header {
   display: flex;
   justify-content: space-between;
+  height: 80px;
+  margin-right: 5%;
+}
+
+.logo-title{
+  display: flex;
+}
+
+.title{
+  margin-left: 3%;
+  margin-top: 18%;
 }
 
 .img-nav {
   width: auto;
-  height: 93%;
-  padding-top: 3px;
+  margin-left: 18%;
+  height: 70%;
+  margin-top: 10%;
 }
 
 .list {
@@ -68,7 +80,7 @@ const NavContainer = styled.nav`
 .navigation {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
 }
 
 .menu {
@@ -78,7 +90,7 @@ const NavContainer = styled.nav`
   position: relative;
   z-index: 1;
   transition: 0.5s;
-  margin-top: 3%;
+  margin-top: 6%;
 }
 
 .menu li a {
@@ -155,13 +167,18 @@ const NavContainer = styled.nav`
   text-align: left;
 }
 
+
+
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
 .header{
-  padding: 3%;
+  padding: 0%;
+  height: 40px;
+  margin-top: 2%;
 }
 
 .img-nav {
+  height: 100%;
     margin-top: 2%;
 }
 
@@ -170,12 +187,16 @@ const NavContainer = styled.nav`
     display: block;
 }
 
+.navigation {
+  margin-top: 7%;
+}
+
 .menu {
     justify-content: start;
     flex-direction: column;
     align-items: baseline;
     position: fixed;
-    top: -13px;
+    top: -27px;
     right: -300px;
     width: 200px;
     height: auto;
@@ -205,7 +226,7 @@ const NavContainer = styled.nav`
 }
 
 .menu li a {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .a-list-Profile {
@@ -234,7 +255,8 @@ const NavContainer = styled.nav`
 }
 
 .title{
-  margin: 20% 0 0% 0;
+  margin: 8% 0 0% 0;
+  font-size: 12px;
   padding-left: 5%;
 }
 
@@ -257,10 +279,10 @@ const Nav = () => {
                 <input type="checkbox" className="toggle-menu"/>
                 <div className="hamburguer"></div>
                 <ul className="menu">
-                    <li className="list"><a href="/" className="a-list-first">Inicio</a></li>
-                    <li className="list"><a href="/gallery" className="a-list">Animales</a></li>
-                    <li className="list"><a href="/about" className="a-list-Profile">Museo</a></li>
-                    <li className="list"><a href="/contact" className="a-list-contact">Contacto</a></li>
+                    <li className="list"><strong><a href="/" className="a-list-first">INICIO</a></strong></li>
+                    <li className="list"><strong><a href="/gallery" className="a-list">ANIMALES</a></strong></li>
+                    <li className="list"><strong><a href="/museum" className="a-list-Profile">MUSEO</a></strong></li>
+                    <li className="list"><strong><a href="/contact" className="a-list-contact">CONTACTO</a></strong></li>
                 </ul>
             </div>
         </header>
