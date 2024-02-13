@@ -1,3 +1,5 @@
+
+
 export const getAnimal = async () => {
     const response = await fetch('http://localhost:3000/animals');
     console.log(response)
@@ -14,8 +16,9 @@ export const deleteAnimal = async (id) => {
   await fetch(`http://localhost:3000/animals/${id}`, {method:"DELETE"}
   ).then(response => {
       if (response.ok) {
-        console.log(response)
-          getAnimal();
-          alert('Animal eliminado correctamente ✅');
+        const confirmDelete = window.confirm("¿Estás seguro que deseas borrar la foto?"); 
+        if (confirmDelete){
+           alert('Eliminado correctamente');
+        }
       }});
 } 

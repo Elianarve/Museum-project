@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import voz from '../assets/voz.png';
 import { deleteAnimal, getAnimal } from '../services/animalServices';
+import { Link } from 'react-router-dom';
 
 const AnimalContainer = styled.section`
 .itemContent {
@@ -136,8 +137,7 @@ const Animal = () => {
           <img src={voz} alt="altavoz" className='altavoz' onClick={() => sound(animal.sound)} />
           </p>
           <p className='description'>{animal.description}</p>
-          <button className="delete-btn" onClick={() => deleteAnimal(animal.id)}>Eliminar</button>
-        
+          <Link to={'/gallery'} onClick={() => deleteAnimal(animal.id)}><button className="delete-btn">Eliminar</button></Link>
           </article> ))}
         </section>
       )}
