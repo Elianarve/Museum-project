@@ -10,7 +10,7 @@ const FooterContainer = styled.footer `
 .container {
     background-color: #13281B;
     color: white;
-    width: 100%;
+    width: 20000px;
     }
 
 .logo-m{

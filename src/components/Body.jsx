@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import portada from '../assets/cartel animales.png';
 import imgBig from '../assets/Rectangle 11.png';
+import Slider from './slider/Slider';
 
 const BodyHome = styled.div `
 .contenedor{
@@ -108,7 +109,14 @@ const Main = () => {
               <p className='paraghrap'>Obras maestras del Museo Nacional de Ciencias Naturales</p>
               <p className='paraghrap'><strong>Exposición</strong></p>
               <p className='paraghrap-last'>04.02.2024 - 25.09.2024</p>
-              <img className='img-full' src={imgBig} alt="" />
+              {/* <img className='img-full' src={imgBig} alt="" /> */}
+
+                    {/* Inicio slider */}
+                    
+                    <Slider />
+
+                    {/* Fin slider */}
+                    
               </div>
               </div>
               
