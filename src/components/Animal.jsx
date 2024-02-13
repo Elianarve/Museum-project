@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import voz from '../assets/voz.png';
-import { getAnimal } from '../services/animalServices';
+import { deleteAnimal, getAnimal } from '../services/animalServices';
 
 const AnimalContainer = styled.section`
 .itemContent {
@@ -91,7 +91,7 @@ const AnimalContainer = styled.section`
 `
 
 const Animal = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(null);// el useEstate es el estado inicial, setData para ver el obejeto (cambios q ocurren) y data donde se guarda el estado
   const [loading, setLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -118,7 +118,7 @@ const Animal = () => {
     };
 
     fetchData();
-  }, []);
+  }, []);  //cuando se monta, se ejecuta
 
 
   return (
@@ -136,7 +136,8 @@ const Animal = () => {
           <img src={voz} alt="altavoz" className='altavoz' onClick={() => sound(animal.sound)} />
           </p>
           <p className='description'>{animal.description}</p>
-          <button>Eliminar</button>
+          <button className="delete-btn" onClick={() => deleteAnimal(animal.id)}>Eliminar</button>
+        
           </article> ))}
         </section>
       )}

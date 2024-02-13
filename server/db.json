@@ -1,58 +1,76 @@
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Ballena Azul",
-            "scientificName": "Balaenoptera musculus",
-            "image": "https://trello.com/1/cards/65c36b966268d407a415a538/attachments/65c375f5a3da4d8815fb5a2e/previews/65c375f6a3da4d8815fb5b03/download/pexels-elianne-dipp-4666750.jpg",
-            "photographer": "Estefania Bartolomé",
-            "sound": "https://trello.com/1/cards/65c36b966268d407a415a538/attachments/65ca20d5f7ebee482ce36423/download/animals_whale_shorter.mp3",
-            "description": "El animal más grande que ha existido en la Tierra, con individuos que pueden alcanzar longitudes de hasta 30 metros y pesar hasta 200 toneladas. Esta especie de ballena es conocida por su característico color gris azulado y su enorme tamaño."
-        },
-        {
-            "id": 2,
-            "name": "Búho",
-            "scientificName": "Strigiformes",
-            "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c3801491fc89df02b3b2df/previews/65c3801591fc89df02b3b321/download/Buho.jpg",
-            "photographer": "Fátima Capilla",
-            "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c38034a18e0965b46d5cd1/download/buho.mp3",
-            "description": "Un búho es un animal que pertenece al clado de los estrígidos. Se trata de un ave de hábitos nocturnos y rapaz, que se caracteriza por contar con plumas que parecen orejas."
-        },
-        {
-            "id": 3,
-            "name": "Águila",
-            "scientificName": "Aquila chrysaetos",
-            "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37db27398c12225616c63/previews/65c37db27398c12225616c84/download/Aguila.jpg",
-            "photographer": "Nuria Sanchez",
-            "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37e0982a3e4df200d4856/download/Aguila.mp3",
-            "description":"El águila real​​ es una especie de ave accipitriforme de la familia Accipitridae.​ Es una de las aves de presa más conocidas y ampliamente distribuidas de la Tierra."
-        },
-        {
-            "id": 4,
-            "name": "Serpiente Cascabel",
-            "scientificName": "Crotalus",
-            "image": "https://trello.com/1/cards/65c36bf1bb9647b7f93b5b33/attachments/65c383a0fbad58bb01919503/previews/65c383a1fbad58bb0191953a/download/Serpiente-cascabel.jpg",
-            "photographer": "Eliana Rendón",
-            "sound": "https://trello.com/1/cards/65c36bf1bb9647b7f93b5b33/attachments/65c383bce00521f8e6435cd3/download/cascabel.mp3",
-            "description":"Las serpientes de cascabel son un género de la subfamilia de las víboras de foseta dentro de la familia de los vipéridos. Son serpientes venenosas y endémicas del continente americano, desde el sureste de Canadá al norte de Argentina."
-        },
-        {
-            "id": 5,
-            "name": "León Marino",
-            "scientificName": "Otaria flavescens",
-            "image": "https://trello.com/1/cards/65c376afaec7b858d260378b/attachments/65c37a8f5b7cb0521a209580/previews/65c37a915b7cb0521a2096cc/download/pexels-pascal-borener-105819.jpg",
-            "photographer": "Amy Cardenas",
-            "sound": "https://trello.com/1/cards/65c376afaec7b858d260378b/attachments/65c379a0b391eab9ae666555/download/audio_hero_SeaLion_DIGIFX2-76.mp3",
-            "description":"Nativos de las costas del Pacífico sur, incluyendo Sudamérica y las islas circundantes. Son excelentes nadadores y buceadores, capaces de sumergirse a profundidades significativas en busca de alimento, que principalmente consiste en peces, calamares y ocasionalmente crustáceos.Los leones marinos son animales sociales que viven en colonias, donde establecen jerarquías sociales y territorios."
-        },
-        {
-            "id": 6,
-            "name": "Guacamayo",
-            "scientificName": "Ara",
-            "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37c8f0d1d4e1bd856fe86/download/Guacamayo.jpg",
-            "photographer": "Ashley Velez",
-            "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37be6cc46991219b6cb9e/download/guacamayo.mp3",
-            "description": "Los guacamayos son loros grandes que miden de 46 a 51 cm de largo y pesan de 285 a 287 en el maracaná grande y de 90 a 95 cm y 1.708 g en el guacamayo aliverde. Las alas de estos guacamayos son largas y estrechas, lo cual es típico de las especies de loros que viajan largas distancias para buscar alimento. Tienen una mandíbula superior masiva curvada hacia abajo y un parche de piel pálida alrededor del ojo que se extiende hasta la base del pico."
-        }
-    ]
+  "animals": [
+    {
+      "id": "1",
+      "name": "Ballena Azul",
+      "scientificName": "Balaenoptera musculus",
+      "image": "https://trello.com/1/cards/65c36b966268d407a415a538/attachments/65c375f5a3da4d8815fb5a2e/previews/65c375f6a3da4d8815fb5b03/download/pexels-elianne-dipp-4666750.jpg",
+      "photographer": "Estefania Bartolomé",
+      "sound": "https://trello.com/1/cards/65c36b966268d407a415a538/attachments/65ca20d5f7ebee482ce36423/download/animals_whale_shorter.mp3",
+      "description": "El animal más grande que ha existido en la Tierra, con individuos que pueden alcanzar longitudes de hasta 30 metros y pesar hasta 200 toneladas. Esta especie de ballena es conocida por su característico color gris azulado y su enorme tamaño."
+    },
+    {
+      "id": "2",
+      "name": "Búho",
+      "scientificName": "Strigiformes",
+      "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c3801491fc89df02b3b2df/previews/65c3801591fc89df02b3b321/download/Buho.jpg",
+      "photographer": "Fátima Capilla",
+      "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c38034a18e0965b46d5cd1/download/buho.mp3",
+      "description": "Un búho es un animal que pertenece al clado de los estrígidos. Se trata de un ave de hábitos nocturnos y rapaz, que se caracteriza por contar con plumas que parecen orejas."
+    },
+    {
+      "id": "3",
+      "name": "Águila",
+      "scientificName": "Aquila chrysaetos",
+      "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37db27398c12225616c63/previews/65c37db27398c12225616c84/download/Aguila.jpg",
+      "photographer": "Nuria Sanchez",
+      "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37e0982a3e4df200d4856/download/Aguila.mp3",
+      "description": "El águila real​​ es una especie de ave accipitriforme de la familia Accipitridae.​ Es una de las aves de presa más conocidas y ampliamente distribuidas de la Tierra."
+    },
+    {
+      "id": "4",
+      "name": "Serpiente Cascabel",
+      "scientificName": "Crotalus",
+      "image": "https://trello.com/1/cards/65c36bf1bb9647b7f93b5b33/attachments/65c383a0fbad58bb01919503/previews/65c383a1fbad58bb0191953a/download/Serpiente-cascabel.jpg",
+      "photographer": "Eliana Rendón",
+      "sound": "https://trello.com/1/cards/65c36bf1bb9647b7f93b5b33/attachments/65c383bce00521f8e6435cd3/download/cascabel.mp3",
+      "description": "Las serpientes de cascabel son un género de la subfamilia de las víboras de foseta dentro de la familia de los vipéridos. Son serpientes venenosas y endémicas del continente americano, desde el sureste de Canadá al norte de Argentina."
+    },
+    {
+      "id": "5",
+      "name": "León Marino",
+      "scientificName": "Otaria flavescens",
+      "image": "https://trello.com/1/cards/65c376afaec7b858d260378b/attachments/65c37a8f5b7cb0521a209580/previews/65c37a915b7cb0521a2096cc/download/pexels-pascal-borener-105819.jpg",
+      "photographer": "Amy Cardenas",
+      "sound": "https://trello.com/1/cards/65c376afaec7b858d260378b/attachments/65c379a0b391eab9ae666555/download/audio_hero_SeaLion_DIGIFX2-76.mp3",
+      "description": "Nativos de las costas del Pacífico sur, incluyendo Sudamérica y las islas circundantes. Son excelentes nadadores y buceadores, capaces de sumergirse a profundidades significativas en busca de alimento, que principalmente consiste en peces, calamares y ocasionalmente crustáceos.Los leones marinos son animales sociales que viven en colonias, donde establecen jerarquías sociales y territorios."
+    },
+    {
+      "id": "6",
+      "name": "Guacamayo",
+      "scientificName": "Ara",
+      "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37c8f0d1d4e1bd856fe86/download/Guacamayo.jpg",
+      "photographer": "Ashley Velez",
+      "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37be6cc46991219b6cb9e/download/guacamayo.mp3",
+      "description": "Los guacamayos son loros grandes que miden de 46 a 51 cm de largo y pesan de 285 a 287 en el maracaná grande y de 90 a 95 cm y 1.708 g en el guacamayo aliverde. Las alas de estos guacamayos son largas y estrechas, lo cual es típico de las especies de loros que viajan largas distancias para buscar alimento. Tienen una mandíbula superior masiva curvada hacia abajo y un parche de piel pálida alrededor del ojo que se extiende hasta la base del pico."
+    },
+    {
+      "id": "7",
+      "name": "Guacamayo",
+      "scientificName": "Ara",
+      "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37c8f0d1d4e1bd856fe86/download/Guacamayo.jpg",
+      "photographer": "Ashley Velez",
+      "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37be6cc46991219b6cb9e/download/guacamayo.mp3",
+      "description": "Los guacamayos son loros grandes que miden de 46 a 51 cm de largo y pesan de 285 a 287 en el maracaná grande y de 90 a 95 cm y 1.708 g en el guacamayo aliverde. Las alas de estos guacamayos son largas y estrechas, lo cual es típico de las especies de loros que viajan largas distancias para buscar alimento. Tienen una mandíbula superior masiva curvada hacia abajo y un parche de piel pálida alrededor del ojo que se extiende hasta la base del pico."
+    },
+    {
+      "id": "8",
+      "name": "Guacamayo",
+      "scientificName": "Ara",
+      "image": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37c8f0d1d4e1bd856fe86/download/Guacamayo.jpg",
+      "photographer": "Ashley Velez",
+      "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37be6cc46991219b6cb9e/download/guacamayo.mp3",
+      "description": "Los guacamayos son loros grandes que miden de 46 a 51 cm de largo y pesan de 285 a 287 en el maracaná grande y de 90 a 95 cm y 1.708 g en el guacamayo aliverde. Las alas de estos guacamayos son largas y estrechas, lo cual es típico de las especies de loros que viajan largas distancias para buscar alimento. Tienen una mandíbula superior masiva curvada hacia abajo y un parche de piel pálida alrededor del ojo que se extiende hasta la base del pico."
+    }
+  ]
 }

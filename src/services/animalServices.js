@@ -10,6 +10,12 @@ export const getAnimal = async () => {
 }
 
 
-export const deleteAnimal = async () => {
-    
-}
+export const deleteAnimal = async (id) => {
+  await fetch(`http://localhost:3000/animals/${id}`, {method:"DELETE"}
+  ).then(response => {
+      if (response.ok) {
+        console.log(response)
+          getAnimal();
+          alert('Animal eliminado correctamente ✅');
+      }});
+} 
