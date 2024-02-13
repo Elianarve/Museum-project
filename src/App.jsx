@@ -5,15 +5,17 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Switch>
-          <Route path="/" component={ContactForm} />
-        </Switch>
+      <Switch>
+        <Route path="/contacto" component={ContactForm} />
+      </Switch>
+
       </div>
     </Router>
   );
 };
 
 export default App;
+
 
 
 
