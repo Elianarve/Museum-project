@@ -1,27 +1,22 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
-import Contact from "../components/Contact";
-import Body from '../components/Body';
-import Animal from '../components/animal'
+import Gallery from '../pages/Gallery';
+import About from '../pages/About';
 
 
 const router = createBrowserRouter([
     {
-      path: "/home",
+      path: "/",
       element: <Home />,
     },
     {
-      path: "/contact",
-      element: <Contact />,
+      path: "/gallery",
+      element: <Gallery />,
     },
     {
-      path: "/body",
-      element: <Body />,
+      path: "/about",
+      element: <About />,
     },
-    {
-      path: "/animal",
-      element: <Animal />
-    }
   ]);
 
 export default router;
