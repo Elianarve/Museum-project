@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SliderContainer = styled.div``
+const SliderContainer = styled.div`
+.d-block {
+    width: 375px;
+    height: 539px;
+}
+`
 
 const Slider = () => {
   return (
