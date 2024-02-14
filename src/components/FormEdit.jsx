@@ -62,7 +62,6 @@ const FormEdit = () => {
   
 
   const { id } = useParams();
-  console.log(id)
 
  useEffect(() => { 
     const fetchData = async () => {
