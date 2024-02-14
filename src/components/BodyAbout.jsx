@@ -24,10 +24,9 @@ const BodyAboutStyle = styled.div `
       justify-content: center;
     }
     .img-cut {
-      width: 100%; /* Ancho de la imagen al 100% del contenedor */
-      height: 100%; /* Altura automática para mantener la proporción */
+      width: 325px; /* Ancho de la imagen al 100% del contenedor */
+      height: 397px; /* Altura automática para mantener la proporción */
       object-fit: cover; /* Recortar la imagen para llenar el contenedor */
-      margin-left: 40px;
     }
   }
 `
