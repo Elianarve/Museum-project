@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import logo from '../assets/logo-oscuro.png';
+import Created from '../pages/CreatedAnimal';
 
 const NavContainer = styled.nav`
 .header {
@@ -167,6 +168,11 @@ const NavContainer = styled.nav`
   text-align: left;
 }
 
+.add-button{
+  margin-left: 40px;
+  border-radius: 25px;
+  padding: 8px;
+}
 
 
 @media only screen and (min-width: 320px) and (max-width: 1000px){
@@ -288,6 +294,7 @@ const Nav = () => {
         </header>
         <hr className='line' />
     </div>
+    <a href="/form"><button className='add-button'>Añadir Animal ➕</button></a>
     </NavContainer>
   )
 }
