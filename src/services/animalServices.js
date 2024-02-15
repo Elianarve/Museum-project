@@ -1,3 +1,5 @@
+
+
 export const getAnimal = async () => {
     const response = await fetch('http://localhost:3000/animals');
     if (!response.ok) {
@@ -25,4 +27,5 @@ export const deleteAnimal = async (id) => {
         }
       }});
 } 
+
 

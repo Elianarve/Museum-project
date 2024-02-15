@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const FormContainer = styled.div`
   max-width: 400px;
@@ -47,6 +47,7 @@ const Button = styled.button`
 `
 
 const AnimalForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     scientificName: '',
@@ -62,7 +63,16 @@ const AnimalForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
+
+    // const formDataObject = new FormData();
+
+    // formDataObject.append('name', formData.name);
+    // formDataObject.append('scientificName', formData.scientificName);
+    // formDataObject.append('image', formData.image);
+    // formDataObject.append('photographer', formData.photographer);
+    // formDataObject.append('sound', formData.sound);
+    // formDataObject.append('description', formData.description);
+try { 
       const response = await fetch('http://localhost:3000/animals', {
         method: 'POST',
         headers: {
@@ -70,27 +80,20 @@ const AnimalForm = () => {
         },
         body: JSON.stringify(formData)
       });
+     navigate('/gallery');
 
-      if (!response.ok) {
-        throw new Error('Error al crear animal');
-      }
+     if (!response.ok) {
+      throw new Error('Erros al crear al animal');
+     }
 
-      alert('Animal creado exitosamente');
-
-      
-      setFormData({
-        name: '',
-        scientificName: '',
-        photographer: '',
-        image: '',
-        description: '',
-        sound: ''
-      });
-    } catch (error) {
-      console.error('Error al crear animal:', error);
-      alert('Error al crear animal');
+     alert('Animal creado exitosamente');
+    } catch (error){
+      console.log('Error al crear animal: ', error);
+      alert('Error al crear el animal');
     }
   };
+
+  
 return (
     <FormContainer>
       <h2>Crear Nuevo Animal</h2>
@@ -119,7 +122,7 @@ return (
           <Label htmlFor="sound">Sonido:</Label>
           <Input type="text" id="sound" name="sound" value={formData.sound} onChange={handleChange} required />
         </FormGroup>
-        <Link to ={'/gallery'}><Button type="submit">Crear</Button></Link>
+         <Button type="submit">Crear</Button>
       </form>
     </FormContainer>
   );
