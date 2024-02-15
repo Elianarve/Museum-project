@@ -74,6 +74,13 @@ const AnimalContainer = styled.section`
     color: white;
 }
 
+.add-button{
+  margin-left: 40px;
+  border-radius: 25px;
+  padding: 8px;
+}
+
+
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
   .itemContent {
@@ -131,6 +138,7 @@ const Animal = () => {
 
   return (
     <AnimalContainer>
+      <a href="/form"><button className='add-button'>Añadir Animal ➕</button></a>
       {loading ? (
         <p>Cargando...</p>
       ) : (
