@@ -78,14 +78,14 @@ const AnimalForm = () => {
       alert('Animal creado exitosamente');
 
       
-      setFormData({
-        name: '',
-        scientificName: '',
-        photographer: '',
-        image: '',
-        description: '',
-        sound: ''
-      });
+      // setFormData({
+      //   name: '',
+      //   scientificName: '',
+      //   photographer: '',
+      //   image: '',
+      //   description: '',
+      //   sound: ''
+      // });
     } catch (error) {
       console.error('Error al crear animal:', error);
       alert('Error al crear animal');
