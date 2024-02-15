@@ -58,16 +58,16 @@ const FormEdit = () => {
     sound: ''
   });
 
-  const [animalData, setAnimalData] = useState(null);
-  
+  //  const [animalData, setAnimalData] = useState(null);
 
   const { id } = useParams();
-  console.log(id)
 
  useEffect(() => { 
     const fetchData = async () => {
         const response = await getOneAnimal(id);  
-        setAnimalData(response)
+         setFormData(response);
+        // setFormData(response || {});
+        // setAnimalData(response)
        }
        fetchData()
     },[id])
@@ -107,33 +107,36 @@ const FormEdit = () => {
       alert('Error al modificar animal');
     }
   };
+
+  
+
 return (
     <FormContainer>
       <h2>Editar Animal</h2>
       <form onSubmit={handleSubmit}>
         <FormGroup>
           <Label htmlFor="name">Nombre: </Label>
-          <Input type="text" id="name" name="name" value={animalData?.name} onChange={handleChange} required />
+          <Input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
         </FormGroup>
         <FormGroup>
           <Label htmlFor="scientificName">Nombre Científico: </Label>
-          <Input type="text" id="scientificName" name="scientificName" value={animalData?.scientificName} onChange={handleChange} required />
+          <Input type="text" id="scientificName" name="scientificName" value={formData.scientificName} onChange={handleChange} required />
         </FormGroup>
         <FormGroup>
           <Label htmlFor="photographer">Autora: </Label>
-          <Input type="text" id="photographer" name="photographer" value={animalData?.photographer} onChange={handleChange} required />
+          <Input type="text" id="photographer" name="photographer" value={formData.photographer} onChange={handleChange} required />
         </FormGroup>
         <FormGroup>
           <Label htmlFor="image">URL de la Imagen:</Label>
-          <Input type="text" id="image" name="image" value={animalData?.image} onChange={handleChange} required />
+          <Input type="text" id="image" name="image" value={formData.image} onChange={handleChange} required />
         </FormGroup>
         <FormGroup>
           <Label htmlFor="description">Descripción: </Label>
-          <Input type="text" id="description" name="description" value={animalData?.description} onChange={handleChange} required />
+          <Input type="text" id="description" name="description" value={formData.description} onChange={handleChange} required />
         </FormGroup>
         <FormGroup>
           <Label htmlFor="sound">Sonido:</Label>
-          <Input type="text" id="sound" name="sound" value={animalData?.sound} onChange={handleChange} required />
+          <Input type="text" id="sound" name="sound" value={formData.sound} onChange={handleChange} required />
         </FormGroup>
         <Link to ={'/gallery'}><Button type="submit">Actualizar</Button></Link>
       </form>
@@ -142,3 +145,5 @@ return (
 };
 
 export default FormEdit;
+
+

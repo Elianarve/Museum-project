@@ -168,13 +168,6 @@ const NavContainer = styled.nav`
   text-align: left;
 }
 
-.add-button{
-  margin-left: 40px;
-  border-radius: 25px;
-  padding: 8px;
-}
-
-
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
 .header{
@@ -294,7 +287,6 @@ const Nav = () => {
         </header>
         <hr className='line' />
     </div>
-    <a href="/form"><button className='add-button'>Añadir Animal ➕</button></a>
     </NavContainer>
   )
 }
