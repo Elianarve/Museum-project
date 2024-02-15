@@ -4,7 +4,6 @@ import voz from '../assets/voz.png';
 import { deleteAnimal, getAnimal } from '../services/animalServices';
 import { Link } from 'react-router-dom';
 
-
 const AnimalContainer = styled.section`
 .itemContent {
   display: flex;
@@ -68,19 +67,6 @@ const AnimalContainer = styled.section`
   box-shadow: 0px 7px 10px black;
 }
 
-.delete-btn{
-  border-radius: 80px;
-  background: red;
-    color: white;
-}
-
-.add-button{
-  margin-left: 40px;
-  border-radius: 25px;
-  padding: 8px;
-}
-
-
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
   .itemContent {
@@ -138,7 +124,6 @@ const Animal = () => {
 
   return (
     <AnimalContainer>
-      <a href="/form"><button className='add-button'>Añadir Animal ➕</button></a>
       {loading ? (
         <p>Cargando...</p>
       ) : (
@@ -152,8 +137,7 @@ const Animal = () => {
           <img src={voz} alt="altavoz" className='altavoz' onClick={() => sound(animal.sound)} />
           </p>
           <p className='description'>{animal.description}</p>
-          <Link to={'/gallery'}><button className="delete-btn" onClick={() => deleteAnimal(animal.id)}>Eliminar</button></Link>
-          <Link to={`/edit/${animal.id}`}><button className="edit-button">Editar</button></Link>
+          <Link to={'/gallery'} onClick={() => deleteAnimal(animal.id)}><button className="delete-btn">Eliminar</button></Link>
           </article> ))}
         </section>
       )}
