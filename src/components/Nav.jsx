@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import logo from '../assets/logo-oscuro.png';
+import Created from '../pages/CreatedAnimal';
 
 const NavContainer = styled.nav`
 .header {
@@ -166,8 +167,6 @@ const NavContainer = styled.nav`
 .title{
   text-align: left;
 }
-
-
 
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
