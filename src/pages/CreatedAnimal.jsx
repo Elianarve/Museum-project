@@ -1,8 +1,8 @@
-import React from 'react'
+import FormCreated from '../components/FormCreated';
 
 const CreatedAnimal = () => {
   return (
-    <div>CreatedAnimal</div>
+    <FormCreated />
   )
 }
 
