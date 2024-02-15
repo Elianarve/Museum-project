@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import Gallery from '../pages/Gallery';
 import About from '../pages/About';
 import CreatedAnimal from "../pages/CreatedAnimal";
-// import FormEdit from '../pages/EditAnimal'
+import FormEdit from '../pages/EditAnimal'
 
 
 const router = createBrowserRouter([
@@ -23,11 +23,11 @@ const router = createBrowserRouter([
       path: "/form",
       element: <CreatedAnimal />,
     }
-    //,
-    // {
-    //   path: "/edit/:id",
-    //   element: <FormEdit/>,
-    // }
+    ,
+    {
+      path: "/edit/:id",
+      element: <FormEdit/>,
+    }
   ]);
 
 export default router;

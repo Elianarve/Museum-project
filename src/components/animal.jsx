@@ -4,6 +4,7 @@ import voz from '../assets/voz.png';
 import { deleteAnimal, getAnimal } from '../services/animalServices';
 import { Link } from 'react-router-dom';
 
+
 const AnimalContainer = styled.section`
 .itemContent {
   display: flex;
@@ -76,6 +77,13 @@ const AnimalContainer = styled.section`
 .edit-button{
   border-radius: 80px;
     color: black;
+}
+
+.add-button{
+  border-radius: 80px;
+  color: black;
+  margin-left: 2%;
+  padding: 10px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 1000px){

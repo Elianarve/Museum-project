@@ -1,9 +1,9 @@
-// import FormEdit from '../components/FormEdit';
+import FormEdit from '../components/FormEdit';
 
-// const EditAnimal = () => {
-//   return (
-//     <FormEdit />
-//   )
-// }
+const EditAnimal = () => {
+  return (
+    <FormEdit />
+  )
+}
 
-// export default EditAnimal
+export default EditAnimal
