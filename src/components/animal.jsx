@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import voz from '../assets/voz.png';
 import { deleteAnimal, getAnimal } from '../services/animalServices';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'; 
 
 const AnimalContainer = styled.section`
 .itemContent {
@@ -68,22 +67,6 @@ const AnimalContainer = styled.section`
   box-shadow: 0px 7px 10px black;
 }
 
-.delete-btn{
-  border-radius: 80px;
-  background: red;
-    color: white;
-}
-
-.edit-button{
-  border-radius: 80px;
-    color: black;
-}
-
-.add-button{
-  border-radius: 80px;
-  margin-left: 2%;
-}
-
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
   .itemContent {
@@ -112,7 +95,6 @@ const Animal = () => {
   const [data, setData] = useState(null);// el useEstate es el estado inicial, setData para ver el obejeto (cambios q ocurren) y data donde se guarda el estado
   const [loading, setLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
-  const navigate = useNavigate();
 
   const sound = (audioSrc) => {
     const audio = new Audio(audioSrc);
@@ -142,7 +124,6 @@ const Animal = () => {
 
   return (
     <AnimalContainer>
-      <Link to={'/form'}><button className='add-button'>Añadir Animal ➕</button></Link>
       {loading ? (
         <p>Cargando...</p>
       ) : (
@@ -156,8 +137,7 @@ const Animal = () => {
           <img src={voz} alt="altavoz" className='altavoz' onClick={() => sound(animal.sound)} />
           </p>
           <p className='description'>{animal.description}</p>
-          <button onClick={() => {deleteAnimal(animal.id); navigate(0)}} className="delete-btn">Eliminar</button>
-          <Link to={`/edit/${animal.id}`}><button className="edit-button">Editar</button></Link>
+          <Link to={'/gallery'} onClick={() => deleteAnimal(animal.id)}><button className="delete-btn">Eliminar</button></Link>
           </article> ))}
         </section>
       )}
@@ -166,3 +146,4 @@ const Animal = () => {
  };
 
 export default Animal;
+
