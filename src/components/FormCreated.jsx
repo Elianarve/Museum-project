@@ -57,22 +57,13 @@ const AnimalForm = () => {
     sound: ''
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // const formDataObject = new FormData();
-
-    // formDataObject.append('name', formData.name);
-    // formDataObject.append('scientificName', formData.scientificName);
-    // formDataObject.append('image', formData.image);
-    // formDataObject.append('photographer', formData.photographer);
-    // formDataObject.append('sound', formData.sound);
-    // formDataObject.append('description', formData.description);
-try { 
       const response = await fetch('http://localhost:3000/animals', {
         method: 'POST',
         headers: {
@@ -83,14 +74,10 @@ try {
      navigate('/gallery');
 
      if (!response.ok) {
-      throw new Error('Erros al crear al animal');
+      throw new Error('Error al crear al animal');
      }
 
      alert('Animal creado exitosamente');
-    } catch (error){
-      console.log('Error al crear animal: ', error);
-      alert('Error al crear el animal');
-    }
   };
 
   

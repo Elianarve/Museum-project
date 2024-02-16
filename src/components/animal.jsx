@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import voz from '../assets/voz.png';
 import { deleteAnimal, getAnimal } from '../services/animalServices';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 
 const AnimalContainer = styled.section`
 .itemContent {
@@ -111,6 +112,7 @@ const Animal = () => {
   const [data, setData] = useState(null);// el useEstate es el estado inicial, setData para ver el obejeto (cambios q ocurren) y data donde se guarda el estado
   const [loading, setLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
+  const navigate = useNavigate();
 
   const sound = (audioSrc) => {
     const audio = new Audio(audioSrc);
@@ -154,7 +156,7 @@ const Animal = () => {
           <img src={voz} alt="altavoz" className='altavoz' onClick={() => sound(animal.sound)} />
           </p>
           <p className='description'>{animal.description}</p>
-          <Link to={'/gallery'} onClick={() => deleteAnimal(animal.id)}><button className="delete-btn">Eliminar</button></Link>
+          <button onClick={() => {deleteAnimal(animal.id); navigate(0)}} className="delete-btn">Eliminar</button>
           <Link to={`/edit/${animal.id}`}><button className="edit-button">Editar</button></Link>
           </article> ))}
         </section>

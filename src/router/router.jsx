@@ -4,6 +4,7 @@ import Gallery from '../pages/Gallery';
 import About from '../pages/About';
 import CreatedAnimal from "../pages/CreatedAnimal";
 import FormEdit from '../pages/EditAnimal'
+import EditAnimal from "../pages/EditAnimal";
 
 
 const router = createBrowserRouter([
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
     ,
     {
       path: "/edit/:id",
-      element: <FormEdit/>,
+      element: <EditAnimal/>,
     }
   ]);
 
