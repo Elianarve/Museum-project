@@ -30,8 +30,7 @@ const BodyAboutStyle = styled.div `
     }
   }
 `
-
-
+//comentario prueba
 
 const BodyAbout = () => {
   return (
