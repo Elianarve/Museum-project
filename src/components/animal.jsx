@@ -67,22 +67,6 @@ const AnimalContainer = styled.section`
   box-shadow: 0px 7px 10px black;
 }
 
-.delete-btn{
-  border-radius: 80px;
-  background: red;
-    color: white;
-}
-
-.edit-button{
-  border-radius: 80px;
-    color: black;
-}
-
-.add-button{
-  border-radius: 80px;
-  margin-left: 2%;
-}
-
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
   .itemContent {
@@ -140,7 +124,6 @@ const Animal = () => {
 
   return (
     <AnimalContainer>
-      <Link to={'/form'}><button className='add-button'>Añadir Animal ➕</button></Link>
       {loading ? (
         <p>Cargando...</p>
       ) : (
@@ -155,7 +138,6 @@ const Animal = () => {
           </p>
           <p className='description'>{animal.description}</p>
           <Link to={'/gallery'} onClick={() => deleteAnimal(animal.id)}><button className="delete-btn">Eliminar</button></Link>
-          <Link to={`/edit/${animal.id}`}><button className="edit-button">Editar</button></Link>
           </article> ))}
         </section>
       )}
@@ -164,3 +146,4 @@ const Animal = () => {
  };
 
 export default Animal;
+
