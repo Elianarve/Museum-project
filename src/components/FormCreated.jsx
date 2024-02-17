@@ -63,7 +63,7 @@ const AnimalForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    try{ 
       const response = await fetch('http://localhost:3000/animals', {
         method: 'POST',
         headers: {
@@ -77,27 +77,12 @@ const AnimalForm = () => {
       throw new Error('Error al crear al animal');
      }
 
-<<<<<<< HEAD
       alert('Animal creado exitosamente');
 
-      
-      // setFormData({
-      //   name: '',
-      //   scientificName: '',
-      //   photographer: '',
-      //   image: '',
-      //   description: '',
-      //   sound: ''
-      // });
-    } catch (error) {
-      console.error('Error al crear animal:', error);
-      alert('Error al crear animal');
-=======
-     alert('Animal creado exitosamente');
+
     } catch (error){
       console.log('Error al crear animal: ', error);
       alert('Error al crear el animal');
->>>>>>> ca85fd023e432347c1acbad2696d7194103e783d
     }
   };
 

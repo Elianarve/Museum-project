@@ -1,6 +1,5 @@
+
 import styled from 'styled-components';
-
-
 
 const FormContainer = styled.div`
   max-width: 400px;
@@ -34,17 +33,17 @@ const Input = styled.input`
 ;
 `
 
-// const Button = styled.button`
-//   width: 100%;
-//   padding: 10px;
-//   background-color: #007bff;
-//   color: #fff;
-//   border: none;
-//   border-radius: 5px;
-//   cursor: pointer;
-//   margin-bottom: 5%;
-// ;
-// `
+const Button = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5%;
+;
+`
 
 // const FormEdit = () => {
 //   const [formData, setFormData] = useState({
@@ -64,6 +63,7 @@ const Input = styled.input`
 //     const fetchData = async () => {
 //         const response = await getOneAnimal(id);  
 //          setFormData(response);
+//          console.log(response)
 //         // setFormData(response || {});
 //         // setAnimalData(response)
 //        }
@@ -77,7 +77,7 @@ const Input = styled.input`
 
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
-
+// console.log(formData)
 //       const response = await fetch(`http://localhost:3000/animals/${id}`, {
 //         method: 'PUT',
 //         headers: {
@@ -130,11 +130,17 @@ const Input = styled.input`
 
 // export default FormEdit;
 
+
+
 import { useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getOneAnimal } from '../services/animalServices';
+//import { getOneAnimal } from '../services/animalServices';
 import { updateAnimal } from '../services/animalServices';
+import { useEffect } from 'react'; 
+//import { Link } from 'react-router-dom';
+
+
 
 const FormEdit = async () => {
 const { register, formState: { errors }, handleSubmit } = useForm();
@@ -143,9 +149,12 @@ const { id } = useParams();
 
 
  useEffect(() => { 
+  console.log('kkk')
     const fetchData = async () => {
-        const response = await getOneAnimal(id);  
-         setAnimalData(response);
+      console.log('ttt')
+        // const response = await getOneAnimal(id);  
+        //  setAnimalData(response);
+         
         // 'name', response.name
         // 'scientificName', response.scientificName
         // 'photographer', response.photographer
@@ -153,6 +162,7 @@ const { id } = useParams();
         // 'description', response.description
         // 'sound', response.sound
        }
+      
        fetchData()
     },[id]);
 
@@ -198,7 +208,7 @@ return (
             <Label htmlFor="sound">Sonido:</Label>
             <Input type="text" id="sound" name="sound" defaultValue={animalData.sound} {...register('sound')} required />
           </FormGroup>
-          <button type="submit">Actualizar</button>
+          <Button><button type="submit">Actualizar</button></Button>
         </form>
       </FormContainer>
     );
