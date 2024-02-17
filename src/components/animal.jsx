@@ -124,6 +124,7 @@ const Animal = () => {
 
   return (
     <AnimalContainer>
+      <Link to={'/form'}><button>Añadir Animal</button></Link>
       {loading ? (
         <p>Cargando...</p>
       ) : (
@@ -138,6 +139,7 @@ const Animal = () => {
           </p>
           <p className='description'>{animal.description}</p>
           <Link to={'/gallery'} onClick={() => deleteAnimal(animal.id)}><button className="delete-btn">Eliminar</button></Link>
+          <Link to={`/edit/${animal.id}`}><button className="edit-button">Editar</button></Link>
           </article> ))}
         </section>
       )}
