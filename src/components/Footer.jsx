@@ -10,10 +10,6 @@ const FooterContainer = styled.footer `
 .container-footer {
     background-color: #13281B;
     color: white;
-<<<<<<< HEAD
-    width: 20000px;
-=======
->>>>>>> feature-footer
     }
 
 .logo-m{
