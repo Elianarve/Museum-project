@@ -133,11 +133,10 @@ const Button = styled.button`
 
 
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getOneAnimal } from '../services/animalServices';
-import { updateAnimal } from '../services/animalServices';
-import { useEffect } from 'react'; 
+import { updateAnimal } from '../services/animalServices'; 
 //import { Link } from 'react-router-dom';
 
 
@@ -149,7 +148,9 @@ const { id } = useParams();
 useEffect(() => { 
   const fetchData = async () => {
     try {
-      const response = await getOneAnimal(id);  
+      const response = await getOneAnimal(id); 
+      setAnimalData(animalData);
+
       setAnimalData(response);
     } catch (error) {
       console.error(error);
