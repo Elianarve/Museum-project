@@ -135,33 +135,26 @@ const Button = styled.button`
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-//import { getOneAnimal } from '../services/animalServices';
+import { getOneAnimal } from '../services/animalServices';
 import { updateAnimal } from '../services/animalServices';
 import { useEffect } from 'react'; 
 //import { Link } from 'react-router-dom';
 
 
-
 const FormEdit = async () => {
-const { register, formState: { errors }, handleSubmit } = useForm();
+const { register,  handleSubmit } = useForm();                  {/*formState: { errors }*/}
 const [animalData, setAnimalData] = useState(null);
 const { id } = useParams();
 
-
- useEffect(() => { 
-  console.log('kkk')
-    const fetchData = async () => {
-      console.log('ttt')
-        // const response = await getOneAnimal(id);  
-        //  setAnimalData(response);
-         
-        // 'name', response.name
-        // 'scientificName', response.scientificName
-        // 'photographer', response.photographer
-        // 'image', response.image
-        // 'description', response.description
-        // 'sound', response.sound
-       }
+useEffect(() => { 
+  const fetchData = async () => {
+    try {
+      const response = await getOneAnimal(id);  
+      setAnimalData(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
       
        fetchData()
     },[id]);
@@ -169,14 +162,12 @@ const { id } = useParams();
     
 const onSubmit = async (response) => {
   try {
-    setAnimalData(true); 
     await updateAnimal(id, response);
   } catch (error) {
     console.error(error);
     throw error;
   }
 };
-
 
 return (
 
@@ -186,7 +177,7 @@ return (
           <FormGroup>
             <Label htmlFor="name">Nombre: </Label>
             <Input type="text" id="name" name="name" defaultValue={animalData.name} {...register('name', {required: true})} />
-            { errors.name?.type === 'required' && <p>Este campo es obligatorio</p>  }
+            {/* { errors.name?.type === 'required' && <p>Este campo es obligatorio</p>  } */}
           </FormGroup>
           <FormGroup>
             <Label htmlFor="scientificName">Nombre Científico: </Label>

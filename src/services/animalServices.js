@@ -14,7 +14,7 @@ export const getOneAnimal = async (id) =>{
   try{
     const response = await fetch(`http://localhost:3000/animals/${id}`);
     const data = await response.json()
-    return data
+     return data
   } catch(error){
     alert('Error');
   }
