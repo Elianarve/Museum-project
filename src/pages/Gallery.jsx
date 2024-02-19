@@ -76,17 +76,21 @@ const AnimalContainer = styled.section`
   }
   
   .image{
-    width: 35vw;
-    height: 35vw;
+    width: 60vw;
+    height: 60vw;
   }
   .marco{
-    width: 40vw;
-    height: 45vw;
-    margin-left: 20%;
+    width: 65vw;
+    height: 75vw;
+    margin-left: 10%;
   }
 
   .name{
     font-size: 24px;
+  }
+
+  .article-animal{
+    margin-bottom: 15%;
   }
 
 }

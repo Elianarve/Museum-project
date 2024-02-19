@@ -30,8 +30,10 @@ const sound = (audioSrc) => {
           <img src={voz} alt="altavoz" className='altavoz' onClick={() => sound(animal.sound)} />
           </p>
           <p className='description'>{animal.description}</p>
+          <div className='buttons'>
           <button className="delete-button" onClick={() => {deleteAnimal(`${animal.id}`); navigate(0)}}>Eliminar</button>
           <button className="edit-button" onClick={() => navigate(`/update/${animal.id}`)}>Actualizar</button>
+          </div>
           </article>)} )}
     </>
       )}
