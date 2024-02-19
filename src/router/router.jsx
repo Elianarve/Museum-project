@@ -1,6 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Gallery from '../pages/Gallery';
+import About from '../pages/About';
+import CreatedAnimal from "../pages/CreatedAnimal";
+import FormEdit from '../pages/EditAnimal'
+import EditAnimal from "../pages/EditAnimal";
 
 const router = createBrowserRouter([
     {
@@ -10,6 +14,19 @@ const router = createBrowserRouter([
     {
       path: "/gallery",
       element: <Gallery />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/form",
+      element: <CreatedAnimal />,
+    }
+    ,
+    {
+      path: "/edit/:id",
+      element: <EditAnimal/>,
     }
   ]);
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import logo from '../assets/logo-oscuro.png';
+import Created from '../pages/CreatedAnimal';
 
 const NavContainer = styled.nav`
 .header {
@@ -15,7 +16,7 @@ const NavContainer = styled.nav`
 
 .title{
   margin-left: 3%;
-  margin-top: 23%;
+  margin-top: 18%;
 }
 
 .img-nav {
@@ -167,13 +168,12 @@ const NavContainer = styled.nav`
   text-align: left;
 }
 
-
-
 @media only screen and (min-width: 320px) and (max-width: 1000px){
 
 .header{
-  padding: 3%;
-  height: 50px;
+  padding: 0%;
+  height: 40px;
+  margin-top: 2%;
 }
 
 .img-nav {
@@ -225,7 +225,7 @@ const NavContainer = styled.nav`
 }
 
 .menu li a {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .a-list-Profile {
@@ -254,7 +254,8 @@ const NavContainer = styled.nav`
 }
 
 .title{
-  margin: 10% 0 0% 0;
+  margin: 8% 0 0% 0;
+  font-size: 12px;
   padding-left: 5%;
 }
 
