@@ -14,20 +14,20 @@ export const getOneAnimal = async (id) =>{
   try{
     const response = await fetch(`http://localhost:3000/animals/${id}`);
     const data = await response.json()
-     return data
+    return data
   } catch(error){
     alert('Error');
   }
 }
 
-export const updateAnimal = async (id, animalData) =>{
+export const updateAnimal = async (id, newData) =>{
   try { 
   const response = await fetch(`http://localhost:3000/animals/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(animalData)
+    body: JSON.stringify(newData)
   });
 
   if (!response.ok) {
