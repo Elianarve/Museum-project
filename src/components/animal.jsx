@@ -124,7 +124,7 @@ const Animal = () => {
 
   return (
     <AnimalContainer>
-      <Link to={'/form'}><button>Añadir Animal</button></Link>
+      <Link to={'/form'}><button>Añadir Animal </button></Link>
       {loading ? (
         <p>Cargando...</p>
       ) : (
