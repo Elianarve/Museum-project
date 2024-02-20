@@ -2,28 +2,16 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const FormContainer = styled.div`
-  .formulario {
-    display: flex;
-  } 
+   .formulario {
+     display: flex;
+  //   flex-direction: row;
+   } 
 
   .inputs {
     width: 35vw; 
   }
 
-  @media only screen and (min-width: 320px) and (max-width: 1000px){
-    .formulario {
-      display: flex;
-      flex-direction: column;
-      width: 60vw;
-    }
-
-    .contenedor {
-      display: flex;
-    }
-  }
-`;
-
-const Container = styled.div`
+.box{ 
     width: 37%;
     margin: 2% 0 3% 5%;
     padding: 10px;
@@ -31,7 +19,8 @@ const Container = styled.div`
     border-radius: 15px;
     background-color: #434D68;
     font-family: 'Roboto',sans-serif;
-`;
+}
+`
 
 const Heading = styled.h2`
   font-size: 1.5rem;
@@ -82,8 +71,19 @@ const MapContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-`;
+}
 
+@media only screen and (min-width: 320px) and (max-width: 1000px){
+  .formulario {
+    display: block;   
+  }
+
+  .box{ 
+    width: 100%;
+}
+
+}
+`
 const ContactForm = () => {
   const [formData, setFormData] = useState({    
     nombre: '',
@@ -157,7 +157,7 @@ const ContactForm = () => {
   return (
     <FormContainer className='contenedor'>
       <div className='formulario'>
-        <Container>
+        <div className='box'>
           <Heading>CONTÁCTANOS</Heading>
           <form onSubmit={handleSubmit}>
             <InputGroup className='inputs'>
@@ -207,7 +207,7 @@ const ContactForm = () => {
             </InputGroup>
             <Button type="submit">Enviar Mensaje</Button>
           </form>
-        </Container>
+        </div>
         <MapContainer>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.27183079143!2d-3.711619825264592!3d40.42497935513926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228648c68edc1%3A0x6ffead3529527c69!2sC.%20de%20Amaniel%2C%202%2C%20Centro%2C%2028015%20Madrid!5e0!3m2!1ses!2ses!4v1707398554055!5m2!1ses!2ses"
