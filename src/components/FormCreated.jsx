@@ -130,6 +130,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const FormContainer = styled.div`
@@ -208,7 +209,7 @@ const AnimalForm = () => {
       throw new Error('Error al crear al animal');
      }
 
-      alert('Animal creado exitosamente');
+      Swal.fire('Animal creado exitosamente');
 
     } catch (error) {
       console.error('Error al crear animal:', error);

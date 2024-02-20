@@ -53,6 +53,15 @@
       "photographer": "Ashley Velez",
       "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37be6cc46991219b6cb9e/download/guacamayo.mp3",
       "description": "Los guacamayos son loros grandes que miden de 46 a 51 cm de largo y pesan de 285 a 287 en el maracaná grande y de 90 a 95 cm y 1.708 g en el guacamayo aliverde. Las alas de estos guacamayos son largas y estrechas, lo cual es típico de las especies de loros que viajan largas distancias para buscar alimento. Tienen una mandíbula superior masiva curvada hacia abajo y un parche de piel pálida alrededor del ojo que se extiende hasta la base del pico."
+    },
+    {
+      "name": "Leon",
+      "scientificName": "Panthera leo",
+      "photographer": "Amy Cardenas re",
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhUYGRgaHBwZGhoaGhocGBwcGhgaGhwcGhgcIS4lHB4rIRoaJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHzQrJCs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAECBwj/xAA/EAACAQMDAgQEAwcCBAYDAAABAhEAAyEEEjEFQSJRYXEGE4GRobHBMkJSYtHh8AfxFCNyohUWJIKS0jNDY//EABkBAAMBAQEAAAAAAAAAAAAAAAECAwAEBf/EACERAAMBAAIDAQEBAQEAAAAAAAABAhEhMQMSQWFRInEy/9oADAMBAAIRAxEAPwCvaZKOVooVF7UUErnZcIR67jNQJU6VNjoJCyK2LdZZosJUmOAsldqtEvbrm1bzToALsqdLU0SdPNSLbim0xBaSKMtVwBUiiiY7+TmamVKy21bdjSUjSb+WDWltVJZfFbBzU2iqNBDU6JWkep0fzrKTM6TURUn/ABE0v1d5V71HZ6gilZYFW/A/52NMoA2PAkigbljNLdT1r5T7ZBVuJ447etc2viEb4I8pEjv3BHbFP6CexPetMprhnMU0s6u3cwDnyP0/rW79gRWcm9hC1yKwAmtXLRLUy01iBWMLXTFI+p6XcDirXc09Lr9jMGikA8m6lp9jmudOasnxf06BuFVCy5FdE1qIVPqyx6aKL20n0eopmLuKIuEnFRX3EZrS3ajvGaGB0C3wak/4g102mPNDvSNDphK3qlBqHTxRqARSsIyW3Bou0K4+XNaDlTRzUbTq6kGpNPXSnfR2n0lTY2cmW7c1KqxRNuzFc3UqbHI9s1yVg1JZQ13dFZdgZ3aNd3UxWtOkiprywKYIHFSIaKs2wRQ91YNMk",
+      "description": "Los leones son animales especialmente sociales en comparación con otros félidos. Una manada de leones se compone de hembras que tienen una relación familiar",
+      "sound": "http://sonidosmp3gratis.com/sounds/LION1.mp3",
+      "id": "2feb"
     }
   ]
 }
