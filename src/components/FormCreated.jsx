@@ -130,6 +130,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const FormContainer = styled.div`
@@ -138,6 +139,7 @@ const FormContainer = styled.div`
   border: solid 1px black;
   padding: 2%;
   margin-top: 3%;
+  margin-bottom: 3%;
   border-radius: 40px;
 
 
@@ -145,6 +147,11 @@ a{
   text-decoration: none;
 }
 ;
+
+@media only screen and (min-width: 320px) and (max-width: 1000px){
+  max-width: 330px;
+  margin-bottom: 4%;
+}
 `
 const FormGroup = styled.div`
   margin-bottom: 20px;
@@ -208,7 +215,7 @@ const AnimalForm = () => {
       throw new Error('Error al crear al animal');
      }
 
-      alert('Animal creado exitosamente');
+      Swal.fire('Animal creado exitosamente');
 
     } catch (error) {
       console.error('Error al crear animal:', error);

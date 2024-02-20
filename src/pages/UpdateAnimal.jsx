@@ -5,6 +5,7 @@ import { getOneAnimal } from '../services/animalServices';
 import { useForm } from 'react-hook-form';
 import { updateAnimal } from '../services/animalServices'; 
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const FormContainer = styled.div`
   max-width: 400px;
@@ -12,7 +13,13 @@ const FormContainer = styled.div`
   border: solid 1px black;
   padding: 2%;
   margin-top: 3%;
-  border-radius: 40px;z
+  border-radius: 40px;
+  margin-bottom: 3%;
+
+  @media only screen and (min-width: 320px) and (max-width: 1000px){
+    max-width: 330px;
+    margin-bottom: 4%;
+  }
 
 
 a{
@@ -74,7 +81,7 @@ const UpdateAnimal = () => {
     const onSubmit = async (data) => {
   try {
     await updateAnimal(id, data);
-    alert('Datos actualizados correctamente')
+    Swal.fire('Datos actualizados correctamente')
   } catch (error) {
     console.error('error', error);
   }
