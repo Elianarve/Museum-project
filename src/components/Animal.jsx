@@ -25,14 +25,15 @@ const sound = (audioSrc) => {
         return  (<article className='article-animal' key={animal.id}>
           <h1 className='name'>Nombre: {animal.name}</h1><br />
           <div className='marco'><img src={animal.image} alt={animal.name} className='image'/></div><br />
-          <h3 className='s_name'>Nombre Científico: <span className='s_name-c'>{animal.scientificName}</span></h3>
+          {/* <h3 className='s_name'>Nombre Científico: <span className='s_name-c'>{animal.scientificName}</span></h3>
           <p className='author'><span className='strong'>Autora: </span>{animal.photographer}
           <img src={voz} alt="altavoz" className='altavoz' onClick={() => sound(animal.sound)} />
           </p>
-          <p className='description'>{animal.description}</p>
+          <p className='description'>{animal.description}</p> */}
           <div className='buttons'>
           <button className="delete-button" onClick={() => {deleteAnimal(`${animal.id}`); navigate(0)}}>Eliminar</button>
           <button className="edit-button" onClick={() => navigate(`/update/${animal.id}`)}>Actualizar</button>
+          <button className="details-button" onClick={() => navigate(`/details/${animal.id}`)}>+ Detalles</button>
           </div>
           </article>)} )}
     </>

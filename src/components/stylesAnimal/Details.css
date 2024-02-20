@@ -1,0 +1,89 @@
+.animal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
+  }
+  
+  .n{
+    font-size: 2vw;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .s_n{
+    margin: 0;
+  }
+  
+  .aut{
+    width: 15%;
+    margin-bottom: 2%;
+  }
+  
+  .descrip{
+      text-align: justify;
+      width: 40%;
+      margin-bottom: 3%;
+  }
+  
+  .s_name-c{
+    font-weight: 400;
+  }
+  
+  .strong{
+    font-weight: 500;
+  }
+  
+  .a-voz{
+    margin-left: 10%;
+    cursor: pointer;
+  }
+  
+  .image{
+    width: 20vw;
+    height: 20vw;
+    background-image: url(https://trello.com/1/cards/65c36b966268d407a415a538/attachments/65c3876ce396894f2b5986ac/previews/65c38770e396894f2b598832/download/pexels-inchs-11552022.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 8%;
+  }
+  .mrc{
+    display: flex;
+    justify-content: center;
+    width: 24vw;
+    height: 26vw;
+    background-color: #ffffff;
+    border: 1px solid #ccc; 
+    box-shadow: 0px 7px 10px black;
+  }
+  
+
+ @media only screen and (min-width: 320px) and (max-width: 1000px){
+   .itemContent {
+     display: block;
+   }
+   .image{
+     width: 60vw;
+     height: 60vw;
+   }
+   .mrc{
+     width: 65vw;
+     height: 75vw;
+   }
+   
+   .n{
+     font-size: 24px;
+   }
+
+   .aut{
+    width: 46%;
+    margin-bottom: 2%;
+  }
+
+  .descrip{
+    width: 60%;
+}  
+   
+ }
+

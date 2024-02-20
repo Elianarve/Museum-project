@@ -6,6 +6,7 @@ import About from '../pages/About';
 import CreatedAnimal from "../pages/CreatedAnimal";
 import UpdateAnimal from "../pages/UpdateAnimal";
 import ContactForm from '../components/Contact';
+import Details from "../components/Details";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         {
           path: "/contact",
           element: <ContactForm />,
+        },
+        {
+          path: "/details/:id",
+          element: <Details />,
         }
       ]
     },
