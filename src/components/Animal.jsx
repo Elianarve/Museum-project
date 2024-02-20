@@ -33,6 +33,7 @@ const sound = (audioSrc) => {
           <div className='buttons'>
           <button className="delete-button" onClick={() => {deleteAnimal(`${animal.id}`); navigate(0)}}>Eliminar</button>
           <button className="edit-button" onClick={() => navigate(`/update/${animal.id}`)}>Actualizar</button>
+          <button className="details-button" onClick={() => navigate(`/details/${animal.id}`)}>+ Detalles</button>
           </div>
           </article>)} )}
     </>

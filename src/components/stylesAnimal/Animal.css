@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-.delete-button, .edit-button{
+.delete-button, .edit-button, .details-button{
     border-radius: 150px;
     background-color: #B6C4B6;
     padding: 8px;
@@ -19,5 +19,10 @@
 
 .edit-button:hover {
     background-color: #434D68;
+    color: white;
+}
+
+.details-button:hover {
+    background-color: #028119;
     color: white;
 }

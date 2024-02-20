@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { getOneAnimal } from '../services/animalServices'; 
 import { useForm } from 'react-hook-form';
 import { updateAnimal } from '../services/animalServices'; 
@@ -52,14 +52,14 @@ const Button = styled.button`
 
 const UpdateAnimal = () => {
     const navigate = useNavigate();
-    const [animalData, setAnimalData] = useState(null);
+    //const [animalData, setAnimalData] = useState(null);
     const { register, formState: { errors },  handleSubmit, setValue  } = useForm(); 
     const { id } = useParams();
 
     useEffect(() => {
         const fetchData = async () =>{
             const response = await getOneAnimal(id); 
-            setAnimalData(animalData);
+            // setAnimalData(animalData);
 
             setValue('name', response.name);
             setValue('scientificName', response.scientificName); 
