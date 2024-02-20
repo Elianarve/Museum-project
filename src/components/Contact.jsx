@@ -3,13 +3,16 @@ import styled from 'styled-components';
 
 const FormContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   margin-left: 30px; /* Ajusta el margen a la izquierda */
 
-  @media only screen and (min-width: 768px) {
-    flex-direction: row;
+  @media only screen and (min-width: 320px) and (max-width: 1000px){
+    display: block;
+    // flex-direction: column;
     justify-content: space-between;
+    margin-left: 0px;
   }
 `;
 
@@ -23,8 +26,9 @@ const Box = styled.div`
   background-color: #434D68;
   font-family: 'Roboto', sans-serif;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 320px) and (max-width: 1000px){
     width: 65%; /* Ajusta el ancho del formulario */
+    margin-left: 17%;
   }
 `;
 
@@ -76,10 +80,12 @@ const MapContainer = styled.div`
   width: 100%;
   max-width: 400px; /* Ajusta el ancho máximo del mapa */
   margin-top: 4%;
-  margin´right: 30px;
-  @media only screen and (min-width: 768px) {
-    width: 30%; /* Ajusta el ancho del mapa */
-    margin-top: 0;
+  margin-right: 30px;
+  margin-left: 8%;
+
+ @media only screen and (min-width: 320px) and (max-width: 1000px){
+    width: 85%; /* Ajusta el ancho del mapa */
+    margin-bottom: 5%;
   }
 `;
 

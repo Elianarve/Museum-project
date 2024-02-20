@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import portada from '../assets/cartel animales.png';
-import imgBig from '../assets/Rectangle 11.png';
+import Slider from '../components/Slider';
 
 const BodyHome = styled.div `
 .contenedor{
@@ -22,6 +22,7 @@ const BodyHome = styled.div `
 }
 
 .paraghraps{
+    width: 30%;
     display: flex;
     flex-direction: column;
 }
@@ -41,11 +42,11 @@ const BodyHome = styled.div `
     padding-right: 12%;
 }
 
-.img-full{
-    width: 90%;
-    height: 60%;
-    object-fit: cover;
-}
+// .img-full{
+//     width: 90%;
+//     height: 60%;
+//     object-fit: cover;
+// }
 
 .paraghrap-text{
     text-align: center;
@@ -93,6 +94,10 @@ const BodyHome = styled.div `
         text-align: center;
         padding: 0 7%;
     }
+
+    .paraghraps{
+        width: 100%;
+    }
 }
 `
 
@@ -108,7 +113,9 @@ const Body = () => {
               <p className='paraghrap'>Obras maestras del Museo Nacional de Ciencias Naturales</p>
               <p className='paraghrap'><strong>Exposición</strong></p>
               <p className='paraghrap-last'>04.02.2024 - 25.09.2024</p>
-              <img className='img-full' src={imgBig} alt="" />
+              <div>
+              <Slider />
+              </div>
               </div>
               </div>
               
