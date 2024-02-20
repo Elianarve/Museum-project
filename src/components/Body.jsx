@@ -17,7 +17,7 @@ const BodyHome = styled.div `
 .img-main{
     width: 30%;
     height: 75%;
-    margin-top: 2%;
+    margin-top: 5%;
     object-fit: cover;
 }
 

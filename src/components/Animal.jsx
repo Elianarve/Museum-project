@@ -1,22 +1,22 @@
-import { useState } from 'react';
-import voz from '../assets/voz.png';
+//import { useState } from 'react';
+//import voz from '../assets/voz.png';
 import { deleteAnimal } from '../services/animalServices';
 import { useNavigate } from 'react-router-dom'; 
 import './stylesAnimal/Animal.css';
 
 const Animal = (data) => {
   const navigate = useNavigate();
-  const [isPlaying, setIsPlaying] = useState(false);
+  //const [isPlaying, setIsPlaying] = useState(false);
 
-const sound = (audioSrc) => {
-  const audio = new Audio(audioSrc);
-  if (isPlaying) {
-    audio.pause();
-  } else {
-    audio.play();
-  }
-  setIsPlaying(!isPlaying);
-};
+// const sound = (audioSrc) => {
+//   const audio = new Audio(audioSrc);
+//   if (isPlaying) {
+//     audio.pause();
+//   } else {
+//     audio.play();
+//   }
+//   setIsPlaying(!isPlaying);
+// };
 
 
   return (

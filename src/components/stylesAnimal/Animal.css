@@ -6,9 +6,9 @@
 .delete-button, .edit-button, .details-button{
     border-radius: 150px;
     background-color: #B6C4B6;
-    padding: 8px;
+    padding: 6px;
     color: #434D68;
-    margin-right: 10%;
+    margin-right: 7%;
     width: 100px;
 }
 

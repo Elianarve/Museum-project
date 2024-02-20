@@ -5,18 +5,19 @@ import medusas from '../assets/medusas.png';
 import patos from '../assets/Rectangle 11.png';
 
 const SliderContainer = styled.div`
-max-width: 600px;
-margin: 0 auto;
+.container {
+    max-width: 600px;
+}
 
 .carousel slide{
-    margin-left:15%;
+    margin-left: 15%;
 }
 `
 
 const Slider = () => {
   return (
     <SliderContainer>
-        <div>
+        <div className='container'>
             <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active" data-bs-interval="2000">
