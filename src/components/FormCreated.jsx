@@ -139,6 +139,7 @@ const FormContainer = styled.div`
   border: solid 1px black;
   padding: 2%;
   margin-top: 3%;
+  margin-bottom: 3%;
   border-radius: 40px;
 
 
@@ -146,6 +147,11 @@ a{
   text-decoration: none;
 }
 ;
+
+@media only screen and (min-width: 320px) and (max-width: 1000px){
+  max-width: 330px;
+  margin-bottom: 4%;
+}
 `
 const FormGroup = styled.div`
   margin-bottom: 20px;
