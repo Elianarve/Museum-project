@@ -10,11 +10,6 @@ margin: 0 auto;
 .carousel-slide{
     margin-left:11%;
 }
-
-// .d-block {
-//     width: 375px;
-//     height: 539px;
-// }
 `
 
 const Slider = () => {
