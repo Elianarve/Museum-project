@@ -130,7 +130,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 
 const FormContainer = styled.div`
   max-width: 400px;
@@ -187,8 +187,8 @@ const AnimalForm = () => {
     sound: ''
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = async (e) => {
@@ -204,9 +204,9 @@ const AnimalForm = () => {
       });
       navigate('/gallery');
 
-      if (!response.ok) {
-        throw new Error('Error al crear animal');
-      }
+     if (!response.ok) {
+      throw new Error('Error al crear al animal');
+     }
 
       alert('Animal creado exitosamente');
 
@@ -215,6 +215,8 @@ const AnimalForm = () => {
       alert('Error al crear animal');
     }
   };
+
+  
 return (
     <FormContainer>
       <h2>Crear Nuevo Animal</h2>
@@ -243,7 +245,7 @@ return (
           <Label htmlFor="sound">Sonido:</Label>
           <Input type="text" id="sound" name="sound" value={formData.sound} onChange={handleChange} required />
         </FormGroup>
-        <Link to ={'/gallery'}><Button type="submit">Crear</Button></Link>
+         <Button type="submit">Crear</Button>
       </form>
     </FormContainer>
   );
