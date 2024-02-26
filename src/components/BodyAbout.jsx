@@ -1,4 +1,3 @@
-import React from 'react'
 import building from '../assets/museo-edificio.jpg'
 import styled from 'styled-components';
 
