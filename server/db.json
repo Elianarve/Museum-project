@@ -64,13 +64,13 @@
       "sound": "http://sonidosmp3gratis.com/sounds/LION1.mp3"
     },
     {
-      "id": "b977",
       "name": "Lobo",
-      "scientificName": "lobo",
+      "scientificName": "Canis lupus",
       "photographer": "Fatima",
       "image": "https://res.cloudinary.com/dvbcmosex/image/upload/v1708948107/images-animals/vqm6dqo2jpyqct8mbclx.jpg",
       "description": "Los leones son animales especialmente sociales en comparación con otros félidos. Una manada de leones se compone de hembras que tienen una relación familiar",
-      "sound": "http://sonidosmp3gratis.com/sounds/ANIMALWOLVES_6003_99_2.mp3"
+      "sound": "http://sonidosmp3gratis.com/sounds/ANIMALWOLVES_6003_99_2.mp3",
+      "id": "b977"
     }
   ]
 }
