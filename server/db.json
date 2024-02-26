@@ -53,6 +53,24 @@
       "photographer": "Ashley Velez",
       "sound": "https://trello.com/1/cards/65c36b7c34c3cc7abc72be2c/attachments/65c37be6cc46991219b6cb9e/download/guacamayo.mp3",
       "description": "Los guacamayos son loros grandes que miden de 46 a 51 cm de largo y pesan de 285 a 287 en el maracaná grande y de 90 a 95 cm y 1.708 g en el guacamayo aliverde. Las alas de estos guacamayos son largas y estrechas, lo cual es típico de las especies de loros que viajan largas distancias para buscar alimento. Tienen una mandíbula superior masiva curvada hacia abajo y un parche de piel pálida alrededor del ojo que se extiende hasta la base del pico."
+    },
+    {
+      "id": "e030",
+      "name": "Leon",
+      "scientificName": "Panthera leo",
+      "photographer": "Amy Cardenas",
+      "image": "https://res.cloudinary.com/dvbcmosex/image/upload/v1708947930/images-animals/c2bv9be2we4bcpuqcolm.jpg",
+      "description": "Los leones son animales especialmente sociales en comparación con otros félidos. Una manada de leones se compone de hembras que tienen una relación familiar",
+      "sound": "http://sonidosmp3gratis.com/sounds/LION1.mp3"
+    },
+    {
+      "id": "b977",
+      "name": "Lobo",
+      "scientificName": "lobo",
+      "photographer": "Fatima",
+      "image": "https://res.cloudinary.com/dvbcmosex/image/upload/v1708948107/images-animals/vqm6dqo2jpyqct8mbclx.jpg",
+      "description": "Los leones son animales especialmente sociales en comparación con otros félidos. Una manada de leones se compone de hembras que tienen una relación familiar",
+      "sound": "http://sonidosmp3gratis.com/sounds/ANIMALWOLVES_6003_99_2.mp3"
     }
   ]
 }

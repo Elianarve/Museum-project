@@ -131,6 +131,8 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import axios from 'axios';
+import '../components/stylesAnimal/FormCreated.css';
 
 
 const FormContainer = styled.div`
@@ -185,6 +187,7 @@ const Button = styled.button`
 
 const AnimalForm = () => {
   const navigate = useNavigate();
+  const [urlImg, setUrlImg] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     scientificName: '',
@@ -194,22 +197,36 @@ const AnimalForm = () => {
     sound: ''
   });
 
+  const changeImagen = async (e) => {
+    const file = e.target.files[0];
+
+    const data = new FormData();
+
+    data.append('file', file);
+    data.append('upload_preset', 'img-react');
+    
+    const response = await axios.post('https://api.cloudinary.com/v1_1/dvbcmosex/image/upload', data);
+      setUrlImg(response.data.secure_url);
+    }
+
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+   let animalData = new FormData();
+   animalData = {...formData, 'image': urlImg};
 
-    try {
+    try{ 
       const response = await fetch('http://localhost:3000/animals', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(animalData)
       });
-      navigate('/gallery');
+     navigate('/gallery');
 
      if (!response.ok) {
       throw new Error('Error al crear al animal');
@@ -217,9 +234,10 @@ const AnimalForm = () => {
 
       Swal.fire('Animal creado exitosamente');
 
-    } catch (error) {
-      console.error('Error al crear animal:', error);
-      alert('Error al crear animal');
+
+    } catch (error){
+      console.log('Error al crear animal: ', error);
+      Swal.fire('Error al crear el animal');
     }
   };
 
@@ -241,8 +259,11 @@ return (
           <Input type="text" id="photographer" name="photographer" value={formData.photographer} onChange={handleChange} required />
         </FormGroup>
         <FormGroup>
-          <Label htmlFor="image">URL de la Imagen:</Label>
-          <Input type="text" id="image" name="image" value={formData.image} onChange={handleChange} required />
+          {/* <Label htmlFor="image">URL de la Imagen:</Label>
+          <Input type="text" id="image" name="image" value={formData.image} onChange={handleChange} required /> */}
+          <h3>Seleccionar imagen</h3>
+          <input type="file" accept='image/*' onChange={changeImagen} />
+          <img className='img-created' src={urlImg} onChange={handleChange} name="image" />
         </FormGroup>
         <FormGroup>
           <Label htmlFor="description">Descripción: </Label>
