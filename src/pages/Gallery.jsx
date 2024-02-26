@@ -59,6 +59,7 @@ const AnimalContainer = styled.section`
   background-size: cover;
   margin-top: 8%;
 }
+
 .marco{
   display: flex;
   justify-content: center;
