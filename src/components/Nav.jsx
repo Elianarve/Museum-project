@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import logo from '../assets/logo-oscuro.png';
-import Created from '../pages/CreatedAnimal';
+// import Created from '../pages/CreatedAnimal';
 
 const NavContainer = styled.nav`
 .header {
