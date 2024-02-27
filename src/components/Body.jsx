@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import portada from '../assets/cartel animales.png';
-import imgBig from '../assets/Rectangle 11.png';
+import Slider from '../components/Slider';
 
 const BodyHome = styled.div `
 .contenedor{
@@ -17,11 +17,12 @@ const BodyHome = styled.div `
 .img-main{
     width: 30%;
     height: 75%;
-    margin-top: 2%;
+    margin-top: 5%;
     object-fit: cover;
 }
 
 .paraghraps{
+    width: 30%;
     display: flex;
     flex-direction: column;
 }
@@ -41,11 +42,11 @@ const BodyHome = styled.div `
     padding-right: 12%;
 }
 
-.img-full{
-    width: 90%;
-    height: 60%;
-    object-fit: cover;
-}
+// .img-full{
+//     width: 90%;
+//     height: 60%;
+//     object-fit: cover;
+// }
 
 .paraghrap-text{
     text-align: center;
@@ -93,10 +94,14 @@ const BodyHome = styled.div `
         text-align: center;
         padding: 0 7%;
     }
+
+    .paraghraps{
+        width: 100%;
+    }
 }
 `
 
-const Main = () => {
+const Body = () => {
     return (
         <BodyHome>
             
@@ -108,13 +113,15 @@ const Main = () => {
               <p className='paraghrap'>Obras maestras del Museo Nacional de Ciencias Naturales</p>
               <p className='paraghrap'><strong>Exposición</strong></p>
               <p className='paraghrap-last'>04.02.2024 - 25.09.2024</p>
-              <img className='img-full' src={imgBig} alt="" />
+              <div>
+              <Slider />
+              </div>
               </div>
               </div>
               
               <h3 className='title-h3'>¡Bienvenido a React Museum!</h3>
               <p className='paraghrap-text'>
-                Nos complace anunciar nuestra nueva exposición temporal: "React the Animals". En colaboración con el Museo Nacional de Ciencias Naturales, hemos reunido una impresionante colección de fotografías que capturan la esencia y la belleza de una amplia variedad de animales. <br /> <br /> 
+                Nos complace anunciar nuestra nueva exposición temporal: React the Animals. En colaboración con el Museo Nacional de Ciencias Naturales, hemos reunido una impresionante colección de fotografías que capturan la esencia y la belleza de una amplia variedad de animales. <br /> <br /> 
                 Desde majestuosas aves hasta cautivadores mamíferos, pasando por fascinantes criaturas acuáticas y misteriosos reptiles, nuestra exposición ofrece una visión única de la diversidad y la maravilla del reino animal. Cada imagen ha sido cuidadosamente seleccionada para revelar detalles sorprendentes y momentos cautivadores de la vida silvestre. <br /> <br /> 
                 Fecha de la exposición: 04 de febrero de 2024 - 25 de septiembre de 2024. <br /> <br /> 
                 Ven y sumérgete en la magia de la naturaleza capturada en instantáneas excepcionales. Explora la conexión entre la tecnología y la biodiversidad mientras disfrutas de estas imágenes inolvidables. A lo largo de los meses que dure la exposición, tendrás la oportunidad de maravillarte con la riqueza de nuestro planeta y apreciar la labor conjunta entre el React Museum y el Museo Nacional de Ciencias Naturales. <br /> <br /> 
@@ -125,4 +132,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default Body;

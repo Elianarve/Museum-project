@@ -1,0 +1,28 @@
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.delete-button, .edit-button, .details-button{
+    border-radius: 150px;
+    background-color: #B6C4B6;
+    padding: 6px;
+    color: #434D68;
+    margin-right: 7%;
+    width: 100px;
+}
+
+.delete-button:hover {
+    background-color: #8E0000;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #434D68;
+    color: white;
+}
+
+.details-button:hover {
+    background-color: #13281B;
+    color: white;
+}
