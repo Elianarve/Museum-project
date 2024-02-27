@@ -9,7 +9,6 @@ const Details = () => {
     const { id } = useParams();
     const [isPlaying, setIsPlaying] = useState(false);
     const [ data, setData ] = useState(null);
-
       
       useEffect(() => {
         const fetchData = async () =>{
@@ -29,7 +28,6 @@ const Details = () => {
         }
         setIsPlaying(!isPlaying);
       };
-
 
     return (
         <div>
