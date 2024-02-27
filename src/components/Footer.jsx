@@ -78,10 +78,18 @@ const Footer = () => {
          </div> 
          <hr /> 
          <div className='icons'>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
             <img className='logo' src={insta} alt="instagram" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
             <img className='logo' src={fcb} alt="facebook" />
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
             <img className='logo' src={twiter} alt="twitter" />
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             <img className='logo' src={youtube} alt="youtube" />
+          </a>
         </div> 
         <p className='copy'>Copyrigth &copy; 2024 REACT Museum</p>
          </div>

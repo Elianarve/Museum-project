@@ -1,5 +1,6 @@
-import { render, screen } from "@testing-library/react"
-import BodyAbout from "./BodyAbout"
+import { render, screen } from "@testing-library/react";
+import BodyAbout from "../components/BodyAbout";
+import { expect, test, describe, beforeEach } from 'vitest';
 
 describe("BodyAbout testing", ()=>{
     beforeEach(()=> {
@@ -17,4 +18,3 @@ test("render TextBodyAbout", () => {
 })
 
 })
-
