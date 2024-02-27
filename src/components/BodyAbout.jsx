@@ -1,4 +1,4 @@
-import React from 'react'
+
 import building from '../assets/museo-edificio.jpg'
 import styled from 'styled-components';
 
@@ -38,7 +38,7 @@ const BodyAbout = () => {
   return (
     <BodyAboutStyle>
         <div className='about-museum'>
-    <img className='img-cut' src={building} alt="" />
+    <img className='img-cut' src={building} alt="Building" />
     <div className='text-about'>
     <strong className='wellcome'>¡Bienvenido a React Museum!</strong>
     <p>
