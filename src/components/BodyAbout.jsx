@@ -37,7 +37,7 @@ const BodyAbout = () => {
   return (
     <BodyAboutStyle>
         <div className='about-museum'>
-    <img className='img-cut' src={building} alt="" />
+    <img className='img-cut' src={building} alt="Building" />
     <div className='text-about'>
     <strong className='wellcome'>¡Bienvenido a React Museum!</strong>
     <p>
